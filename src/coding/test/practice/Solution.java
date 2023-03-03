@@ -9,6 +9,10 @@ public class Solution {
 		int answer=num1%num2;
 		return answer;
 	}
+	int subtraction(int num1, int num2) {
+		int answer=num1-num2;
+		return answer;
+	}
 
 	public static void main(String[] args) {
 		Solution sol=new Solution();
@@ -17,5 +21,8 @@ public class Solution {
 		
 		int answer2=sol.divide(3, 2);
 		System.out.println("정답2 : "+answer2);
+		
+		int answer3=sol.subtraction(5, 3);
+		System.out.println("정답3 : "+answer3);
 	}
 }
