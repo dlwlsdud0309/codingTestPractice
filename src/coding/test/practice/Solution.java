@@ -17,6 +17,10 @@ public class Solution {
 		int answer=num1/num2;
 		return answer;
 	}
+	int addition(int num1, int num2) {
+		int answer=num1+num2;
+		return answer;
+	}
 
 	public static void main(String[] args) {
 		Solution sol=new Solution();
@@ -31,5 +35,8 @@ public class Solution {
 		
 		int answer4=sol.quotient(7, 2);
 		System.out.println("정답4 : "+answer4);
+
+		int answer5=sol.addition(5, 3);
+		System.out.println("정답5 : "+answer5);
 	}
 }
