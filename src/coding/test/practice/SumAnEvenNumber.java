@@ -5,10 +5,8 @@ public class SumAnEvenNumber {
 		int answer=0;
 		
 		for (int i = 1; i <= n; i++) {
-			if (n%2==0) {
-				answer+=n;
-			}else {
-				System.out.println("홀수입니다");
+			if (i%2==0) {
+				answer+=i;
 			}
 		}
 		
@@ -16,7 +14,7 @@ public class SumAnEvenNumber {
 	}
 	public static void main(String[] args) {
 		SumAnEvenNumber saen=new SumAnEvenNumber();
-		int answer=saen.solution(6);
+		int answer=saen.solution(10);
 		System.out.println(answer);
 	}
 }
