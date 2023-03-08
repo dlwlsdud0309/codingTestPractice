@@ -11,4 +11,7 @@ public class AvgArray {
 		
 		return answer;
 	}
+//	public static void main(String[] args) {
+//		AvgArray aa=new AvgArray();
+//	}
 }
