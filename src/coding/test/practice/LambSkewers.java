@@ -12,6 +12,11 @@ public class LambSkewers {
 			answer=n*lambSkewersPrice-(x*drinkPrice)+drinkPrice*k;
         }
         
+//      answer=n*12000+k*2000-(x*2000); //정답
+        
+//        answer=n*lambSkewersPrice-(x*drinkPrice)+drinkPrice*k; //정답
+//      if문이 오류였던 것 같다
+        
         return answer;
     }
 	
