@@ -26,6 +26,6 @@ public class MusscOfHeight {
     }
 	public static void main(String[] args) {
 		MusscOfHeight mog=new MusscOfHeight();
-		mog.solution(6, 200);
+	//	mog.solution(6, 200);
 	}
 }
