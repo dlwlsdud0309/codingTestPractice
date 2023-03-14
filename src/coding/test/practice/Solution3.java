@@ -1,17 +1,35 @@
 package coding.test.practice;
 
 public class Solution3 {
-	 public int solution(int[] dot) {
-	     int answer=0;
-	     dot=new int[2];
-	     
-	     x=1;
-		 dot[0]='x';
-	     dot[1]='y';
-	     if ('x'>0) {
-			
+	public int[] solution(int[] num_list) {
+		
+		//num_list=new int[] {1,2,3,4,5};
+		int[] answer = new int[1];
+//		int answer1=0;
+		
+		for (int i = 0; i < num_list.length; i++) {
+			if (num_list[i]%2==0) {
+				answer[0]=num_list.length;
+				System.out.println(answer[0]);
+			}if(num_list[i]%3==0) {
+				answer[1]=num_list.length;
+				System.out.println(answer[1]);
+			}
+			//answer1=(num_list[i]%2==0 ? answer[0]=num_list.length:answer[1]=num_list.length);
 		}
-	        
-	        return answer;
-	    }
+		
+		
+        
+        return answer;
+    }
+	public static void main(String[] args) {
+		Solution3 s3=new Solution3();
+		int[] num_list=new int[] {1,2,3,4,5};
+//		s3.solution(num_list);
+		
+		int answer[];
+		answer=s3.solution(num_list);
+		System.out.println("0"+answer[0]);
+		System.out.println("1"+answer[1]);
+	}
 }
