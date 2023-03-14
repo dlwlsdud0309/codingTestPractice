@@ -1,6 +1,7 @@
 package coding.test.practice;
 
 public class Solution3 {
+//	짝수 홀수 개수.. 그러나 구하지 못했다
 	public int[] solution(int[] num_list) {
 		
 		//num_list=new int[] {1,2,3,4,5};
