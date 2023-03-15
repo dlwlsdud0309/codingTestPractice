@@ -1,5 +1,7 @@
 package array.test.exam;
 
+import java.util.Arrays;
+
 public class ArrayExam5 {
 	public static void main(String[] args) {
 		//배열선언
@@ -44,5 +46,22 @@ public class ArrayExam5 {
 		System.out.println("총점3 : "+sum3);
 		System.out.println("인원 수3 : "+scores2.length);
 		System.out.println("평균3 : "+avg3);
+		
+		System.out.println("==========구분선==========");
+		
+		//배열선언
+		int[] scores4= {125,251,121,454,777,889};
+		
+		int sum4=0;
+		for (int i = 0; i < scores4.length; i++) {
+			sum4+=scores4[i];
+		}
+		float avg4=(float)sum4/scores4.length;
+		
+		System.out.println("총점4 : "+sum4);
+		System.out.println("인원 수4 : "+scores4.length);
+		System.out.println("평균4 : "+avg4);
+		
+		System.out.println(Arrays.toString(scores4));
 	}
 }
