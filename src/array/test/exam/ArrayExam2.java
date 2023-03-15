@@ -2,7 +2,7 @@ package array.test.exam;
 
 import java.util.Arrays;
 
-public class ArrayExam5 {
+public class ArrayExam2 {
 	public static void main(String[] args) {
 		//배열선언
 		int[] arr= {10,20,30,40,50};
