@@ -59,6 +59,9 @@ public class JavaBoard_clone4 {
 		}
 	}
 	private void putData(int number) {
+		
+		data=new HashMap<String, Object>(); //미작성
+		
 		data.put("번호", number);
 		
 		System.out.println("제목 : ");
