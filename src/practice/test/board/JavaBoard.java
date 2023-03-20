@@ -64,7 +64,41 @@ public class JavaBoard {
 				System.out.println("작성자 : "+list.get(i).get("작성자"));
 				System.out.println("작성일 : "+list.get(i).get("작성일"));
 				
+				seeDetail(input1);
+				
 				return;
+			}
+		}
+	}
+	
+	private void seeDetail(int input1) { //상세정보 창에서 수정하기
+		while(true) {
+			System.out.println("1.수정\t2.삭제\t3.목록");
+			int input=sc.nextInt();
+			switch (input) {
+			case 1:
+				for (int i = 0; i < list.size(); i++) {
+					if ((int)list.get(i).get("번호")==input) {
+						System.out.println("글을 수정합니다.");
+						
+						System.out.println("제목 : ");
+						list.get(i).put("제목", sc.next());
+						System.out.println("내용 : ");
+						list.get(i).put("내용", sc.next());
+						System.out.println("작성자 : ");
+						list.get(i).put("작성자", sc.next());
+					}
+				}
+				break;
+			case 2:
+				
+				break;
+			case 3:
+				
+				return;
+
+			default:
+				break;
 			}
 		}
 	}
