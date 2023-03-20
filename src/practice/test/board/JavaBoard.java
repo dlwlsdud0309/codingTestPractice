@@ -40,7 +40,8 @@ public class JavaBoard {
 			switch (input) {
 			case 1: //조회
 				System.out.println("조회할 게시물 번호");
-		//		int input1=sc.nextInt();
+				int input1=sc.nextInt();
+				listData(input1);
 				break;
 			case 2: //등록
 				putData(number);
@@ -55,6 +56,19 @@ public class JavaBoard {
 			}
 		}
 	}
+	private void listData(int input1) { //조회할 게시물의 번호 입력하여 상세정보(제목, 내용, 작성자, 작성일) 확인
+		for (int i = 0; i < list.size(); i++) {
+			if ((int)list.get(i).get("번호")==input1) { //int로 형변환 필요
+				System.out.println("제목 : "+list.get(i).get("제목"));
+				System.out.println("내용 : "+list.get(i).get("내용"));
+				System.out.println("작성자 : "+list.get(i).get("작성자"));
+				System.out.println("작성일 : "+list.get(i).get("작성일"));
+				
+				return;
+			}
+		}
+	}
+	
 	private void putData(int number) {
 		//글작성
 		data=new HashMap<String, Object>();
