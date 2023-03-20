@@ -50,6 +50,8 @@ public class JavaBoard {
 				System.out.println("작성하신 글이 등록되었습니다.");
 				break;
 			case 0:
+				System.out.println("JavaBoard를 종료합니다.");
+				System.exit(0);
 				break;
 			default:
 				break;
@@ -77,28 +79,41 @@ public class JavaBoard {
 			int input=sc.nextInt();
 			switch (input) {
 			case 1:
-				for (int i = 0; i < list.size(); i++) {
-					if ((int)list.get(i).get("번호")==input) {
-						System.out.println("글을 수정합니다.");
-						
-						System.out.println("제목 : ");
-						list.get(i).put("제목", sc.next());
-						System.out.println("내용 : ");
-						list.get(i).put("내용", sc.next());
-						System.out.println("작성자 : ");
-						list.get(i).put("작성자", sc.next());
-					}
-				}
+				modifyData(input1);
 				break;
 			case 2:
-				
-				break;
+				deleteData(input1);
+				return;
 			case 3:
 				
 				return;
 
 			default:
 				break;
+			}
+		}
+	}
+
+	private void deleteData(int input1) {
+		System.out.println("글을 삭제합니다.");
+		for (int i = 0; i < list.size(); i++) {
+			if ((int)list.get(i).get("번호")==input1) {
+				list.remove(i);
+			}
+		}
+	}
+
+	private void modifyData(int input1) {
+		for (int i = 0; i < list.size(); i++) {
+			if ((int)list.get(i).get("번호")==input1) { //여기를 input으로 작성하면 2번 글을 수정했을 때 1번 글이 수정된다.
+				System.out.println("글을 수정합니다.");
+				
+				System.out.println("제목 : ");
+				list.get(i).put("제목", sc.next());
+				System.out.println("내용 : ");
+				list.get(i).put("내용", sc.next());
+				System.out.println("작성자 : ");
+				list.get(i).put("작성자", sc.next());
 			}
 		}
 	}
