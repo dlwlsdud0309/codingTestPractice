@@ -75,18 +75,47 @@ public class JavaBoard2 {
 	}
 	private void seeDetail(int input1) {
 		//수정,삭제,목록 보기
-//		while (true) {
-//			System.out.println("1.수정\t2.삭제\t3.목록");
-//			int input=sc.nextInt();
-//			switch (true) {
-//			case 1:
-//				
-//				break;
-//
-//			default:
-//				break;
-//			}
-//		}
+		while (true) {
+			System.out.println("1.수정\t2.삭제\t3.목록");
+			int input=sc.nextInt();
+			switch (input) {
+			case 1:
+				modifyData(input1);
+				break;
+			case 2:
+				deleteData(input1);
+				return;
+			case 3:
+				return;
+
+			default:
+				break;
+			}
+		}
+	}
+
+	private void deleteData(int input1) {
+		System.out.println("게시글을 삭제했습니다.");
+		for (int i = 0; i < list.size(); i++) {
+			if ((int)list.get(i).get("번호")==input1) {
+				list.remove(i);
+			}
+		}
+	}
+
+	private void modifyData(int input1) {
+		for (int i = 0; i < list.size(); i++) {
+			if ((int)list.get(i).get("번호")==input1) {
+				System.out.println("게시글을 수정합니다.");
+				
+				System.out.println("제목 : ");
+				list.get(i).put("제목", sc.next());
+				System.out.println("내용 : ");
+				list.get(i).put("내용", sc.next());
+				System.out.println("작성자 : ");
+				list.get(i).put("작성자", sc.next());
+			}
+		}
 	}
 	
 	private void putData(int number) {
