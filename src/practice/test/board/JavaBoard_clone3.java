@@ -68,9 +68,14 @@ public class JavaBoard_clone3 {
 				System.out.println("작성자 : "+list.get(i).get("작성자"));
 				System.out.println("작성일 : "+list.get(i).get("작성일"));
 				
-//				seeDetail(input1); //상세정보 창에서 수정하기
+				seeDetail(input1); //상세정보 창에서 수정하기
 			}
 		}
+	}
+	
+	private void seeDetail(int input1) {
+		//상세정보 창에서 수정, 삭제, 목록으로 가기
+		
 	}
 	
 	private void putData(int number) {
