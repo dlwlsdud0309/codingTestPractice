@@ -40,6 +40,10 @@ public class JavaBoard_clone3 {
 			switch (input) {
 			case 1:
 				System.out.println("조회할 게시글 번호");
+				
+				int input1=sc.nextInt(); //미작성
+				listData(input1); //미작성
+				
 				break;
 			case 2:
 				putData(number);
@@ -51,6 +55,20 @@ public class JavaBoard_clone3 {
 				break;
 			default:
 				break;
+			}
+		}
+	}
+	
+	private void listData(int input1) {
+		//조회할 게시물의 번호 입력하여 상세정보(제목,내용,작성자,작성일) 확인
+		for (int i = 0; i < list.size(); i++) {
+			if ((int)list.get(i).get("번호")==input1) {
+				System.out.println("제목 : "+list.get(i).get("제목"));
+				System.out.println("내용 : "+list.get(i).get("내용"));
+				System.out.println("작성자 : "+list.get(i).get("작성자"));
+				System.out.println("작성일 : "+list.get(i).get("작성일"));
+				
+//				seeDetail(input1); //상세정보 창에서 수정하기
 			}
 		}
 	}
