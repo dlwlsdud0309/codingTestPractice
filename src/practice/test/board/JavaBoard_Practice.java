@@ -32,8 +32,8 @@ public class JavaBoard_Practice {
 				
 				break;
 			case 2: //등록
-				putData(number);
-				number++;
+				putData(number); //putData라는 메소드 안에 nember를 1부터 넣고 실행(등록)되면
+				number++; //number가 1씩 증가하여 게시글번호 차례대로 부여함
 				System.out.println("작성하신 글이 등록되었습니다.");
 				break;
 			case 0:

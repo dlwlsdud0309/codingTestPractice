@@ -23,6 +23,16 @@ public class JavaBoard_Practice2 {
 			System.out.println("================================");
 			System.out.println("NO\t제목\t작성자\t작성일");
 			System.out.println("================================");
+			
+			//출력
+			for (int i = list.size()-1; i >=0; i--) { //거꾸로 출력
+				System.out.print(list.get(i).get("번호"));
+				System.out.print("\t"+list.get(i).get("제목"));
+				System.out.print("\t"+list.get(i).get("작성자"));
+				System.out.print("\t"+list.get(i).get("작성일"));
+				System.out.println();
+				System.out.println("----------------------------");
+			}
 
 			System.out.println("1.조회\t2.등록\t0.종료");
 			int input=sc.nextInt();
@@ -32,8 +42,9 @@ public class JavaBoard_Practice2 {
 				
 				break;
 			case 2: //등록
-				putData(number);
-				number++;
+				putData(number); //putData라는 메소드 안에 number를 1부터 넣고 실행하면
+				list.add(data);
+				number++; //number가 1씩 증가하여 게시글번호 차례대로 부여함
 				System.out.println("작성하신 글이 등록되었습니다.");
 				break;
 			case 0:
