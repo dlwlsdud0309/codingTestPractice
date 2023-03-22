@@ -23,7 +23,30 @@ public class JavaBoard_clone6 {
 			System.out.println("=========================");
 			
 			for (int i = list.size()-1; i >=0 ; i--) {
-				
+				System.out.println(list.get(i).get("번호"));
+				System.out.println("\t"+list.get(i).get("제목"));
+				System.out.println("\t"+list.get(i).get("작성자"));
+				System.out.println("\t"+list.get(i).get("작성일"));
+			}
+			System.out.println("1.조회\t2.등록\t0.종료");
+			
+			int input=sc.nextInt();
+			switch (input) {
+			case 1:
+				System.out.println("조회할 게시물 번호");
+				break;
+			case 2: //이해가 잘 안되고 있다...
+				list.add(data);
+//				listData(input);
+				number++;
+				System.out.println("게시물이 등록되었습니다.");
+				return;
+			case 0:
+				System.exit(0);
+				break;
+
+			default:
+				break;
 			}
 		}
 	}
