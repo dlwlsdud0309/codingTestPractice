@@ -29,7 +29,8 @@ public class JavaBoard_clone7 {
 				
 				break;
 			case 2:
-				
+				int input1=sc.nextInt();
+				System.out.println("작성하신 글이 등록되었습니다.");
 				break;
 			case 0:
 				
@@ -40,6 +41,8 @@ public class JavaBoard_clone7 {
 			}
 
 		}
+		
+
 		
 		
 	}
