@@ -29,9 +29,12 @@ public class JavaBoard_clone7 {
 				
 				break;
 			case 2:
-				int input1=sc.nextInt();//오답
-				putData(input1); //오답
+//				int input1=sc.nextInt();//오답
+//				putData(input1); //오답
+				
+				putData(number);
 				number++;
+				list.add(data);
 				System.out.println("작성하신 글이 등록되었습니다.");
 				break;
 			case 0:
