@@ -69,7 +69,44 @@ public class JavaBoard_Practice3 {
 				System.out.println("내용 : "+list.get(i).get("내용"));
 				System.out.println("작성자 : "+list.get(i).get("작성자"));
 				System.out.println("작성일 : "+list.get(i).get("작성일"));
-			
+				
+				//확인할 게시물의 번호가 입력되면
+				//수정과 삭제, 목록으로 가기를 구현하기
+				modifyDeleteAndList(input1);
+			}
+		}
+	}
+	
+	private void modifyDeleteAndList(int input1) {
+		while(true) { //왜 while문을 써야할까?
+			System.out.println("1.수정\t2.삭제\t3.목록");
+			int input=sc.nextInt();
+			switch (input) {
+			case 1: //수정
+				for (int i = 0; i < list.size(); i++) {
+					if((int)list.get(i).get("번호")==input) {
+						System.out.println("글을 수정합니다.");
+						System.out.println("제목 : ");
+						list.get(i).put("제목", sc.next());
+						System.out.println("내용 : ");
+						list.get(i).put("내용", sc.next());
+					}
+				}
+				break;
+			case 2: //삭제
+				System.out.println("글을 삭제합니다.");
+				for (int i = 0; i < list.size(); i++) {
+					if ((int)list.get(i).get("번호")==input1) {
+						list.remove(i);
+					}
+				}
+				break;
+			case 3: //목록으로 가기
+				
+				return;
+
+			default:
+				break;
 			}
 		}
 	}
