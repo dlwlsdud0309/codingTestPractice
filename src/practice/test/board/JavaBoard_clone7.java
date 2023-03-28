@@ -91,7 +91,15 @@ public class JavaBoard_clone7 {
 			int input=sc.nextInt();
 			switch (input) {
 			case 1: //수정
-				
+				for (int i = 0; i < list.size(); i++) {
+					if ((int)list.get(i).get("번호")==input) {
+						System.out.println("글을 수정합니다.");
+						System.out.println("제목 : ");
+						list.get(i).put("제목", sc.next());
+						System.out.println("내용 : ");
+						list.get(i).put("내용", sc.next());
+					}
+				}
 				break;
 			case 2: //삭제
 				
