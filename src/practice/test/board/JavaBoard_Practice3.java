@@ -40,7 +40,9 @@ public class JavaBoard_Practice3 {
 			
 			switch (input) {
 			case 1: //조회
-				
+				System.out.println("조회할 게시물 번호를 입력하세요.");
+				int input1=sc.nextInt();
+				readData(input1);
 				break;
 			case 2: //등록
 				putData(number);
@@ -55,6 +57,19 @@ public class JavaBoard_Practice3 {
 
 			default:
 				break;
+			}
+		}
+	}
+	private void readData(int input1) {
+		//조회할 게시물 번호 입력하여 해당 게시글의 상세정보 확인
+		System.out.println(input1+"번 게시글을 확인합니다.");
+		for (int i = 0; i < list.size(); i++) {
+			if ((int)list.get(i).get("번호")==input1) {
+				System.out.println("제목 : "+list.get(i).get("제목"));
+				System.out.println("내용 : "+list.get(i).get("내용"));
+				System.out.println("작성자 : "+list.get(i).get("작성자"));
+				System.out.println("작성일 : "+list.get(i).get("작성일"));
+			
 			}
 		}
 	}
