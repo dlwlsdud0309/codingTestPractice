@@ -92,7 +92,7 @@ public class JavaBoard_clone7 {
 			switch (input) {
 			case 1: //수정
 				for (int i = 0; i < list.size(); i++) {
-					if ((int)list.get(i).get("번호")==input) {
+					if ((int)list.get(i).get("번호")==input1) {
 						System.out.println("글을 수정합니다.");
 						System.out.println("제목 : ");
 						list.get(i).put("제목", sc.next());
@@ -102,7 +102,12 @@ public class JavaBoard_clone7 {
 				}
 				break;
 			case 2: //삭제
-				
+				System.out.println("글을 삭제합니다.");
+				for (int i = 0; i < list.size(); i++) {
+					if ((int)list.get(i).get("번호")==input1) {
+						list.remove(i);
+					}
+				}
 				break;
 			case 3: //목록으로 가기
 				
