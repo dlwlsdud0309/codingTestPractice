@@ -64,6 +64,7 @@ public class JavaBoard_clone4 {
 		//조회할 게시물의 번호 입력하여
 		//해당 게시물의 제목, 내용, 작성자, 작성일 확인
 		for (int i = 0; i < list.size(); i++) {
+			if ((int)list.get(i).get("번호")==input1) { //미작성
 			System.out.println("제목 : "+list.get(i).get("제목"));
 			System.out.println("내용 : "+list.get(i).get("내용"));
 			System.out.println("작성자 : "+list.get(i).get("작성자"));
@@ -71,8 +72,11 @@ public class JavaBoard_clone4 {
 			
 //			상세정보 창에서 수정, 삭제, 목록 보기
 			seeDetail(input1);
+			
+			return; //미작성
+
+			}
 		}
-		
 	}
 	private void seeDetail(int input1) {
 		while(true) {
