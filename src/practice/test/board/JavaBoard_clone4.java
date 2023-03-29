@@ -70,9 +70,37 @@ public class JavaBoard_clone4 {
 			System.out.println("작성일 : "+list.get(i).get("작성일"));
 			
 //			상세정보 창에서 수정, 삭제, 목록 보기
-//			seeDetail(input1);
+			seeDetail(input1);
 		}
 		
+	}
+	private void seeDetail(int input1) {
+		while(true) {
+			System.out.println("1.수정\t2.삭제\t3.목록");
+			int input=sc.nextInt();
+			switch (input) {
+			case 1:
+				for (int i = 0; i < list.size(); i++) {
+					if ((int)list.get(i).get("번호")==input1) {
+						System.out.println("글을 수정합니다.");
+						System.out.println("제목 : ");
+						list.get(i).put("제목", sc.next());
+						System.out.println("내용 : ");
+						list.get(i).put("내용", sc.next());
+					}
+				}
+				break;
+			case 2:
+				for (int i = 0; i < list.size(); i++) {
+					if ((int)list.get(i).get("번호")==input1) {
+						list.remove(i);
+					}
+				}
+				return;
+			case 3:
+				return;
+			}
+		}
 	}
 	private void putData(int number) {
 		
