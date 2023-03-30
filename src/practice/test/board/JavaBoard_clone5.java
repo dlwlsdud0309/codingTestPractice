@@ -58,22 +58,36 @@ public class JavaBoard_clone5 {
 		}
 	}
 	private void readData(int input1) {
-		while(true) {
-			System.out.println("1.수정\t2.삭제\t3.목록");
-			for (int i = 0; i < list.size(); i++) {
-				if((int)list.get(i).get("번호")==input1) {
-					System.out.println("제목 : ");
-					list.get(i).put("제목", sc.next());
-					System.out.println("내용 : ");
-					list.get(i).put("내용", sc.next());
-				}
-				return;
+		//조회할 게시물 번호 입력하여 해당 게시글 상세내용 확인
+		for (int i = 0; i < list.size(); i++) {
+			if ((int)list.get(i).get("번호")==input1) {
+				//입력한 번호와 리스트에 저장된 게시물의 번호가 같다면
+				System.out.println("제목 : "+list.get(i).get("제목"));
+				System.out.println("내용 : "+list.get(i).get("내용"));
+				System.out.println("작성자 : "+list.get(i).get("작성자"));
+				System.out.println("작성일 : "+list.get(i).get("작성일"));
+				
+				//확인한 게시물에 대하여 수정, 삭제 및 목록으로 가기 구현
+				modifyDeleteAndList(input1);
+				
 			}
+		}
+		
+		
+//		while(true) {
+//			System.out.println("1.수정\t2.삭제\t3.목록");
+//			for (int i = 0; i < list.size(); i++) {
+//				if((int)list.get(i).get("번호")==input1) {
+//					System.out.println("제목 : ");
+//					list.get(i).put("제목", sc.next());
+//					System.out.println("내용 : ");
+//					list.get(i).put("내용", sc.next());
+//				}
+//				return;
+//			}
 			
 			
 //			int input=sc.nextInt();
-			
-			
 			
 //			switch (input) {
 //			case 1:
@@ -98,6 +112,41 @@ public class JavaBoard_clone5 {
 //			case 3:
 //				return;
 //			}
+//		}
+	}
+	
+	private void modifyDeleteAndList(int input1) {
+		while(true) {
+			//수정, 삭제, 목록
+			System.out.println("1.수정\t2.삭제\t3.목록");
+			int input=sc.nextInt();
+			switch (input) {
+			case 1: //수정
+				for (int i = 0; i < list.size(); i++) {
+					if ((int)list.get(i).get("번호")==input1) {
+						System.out.println("글을 수정합니다.");
+						System.out.println("제목 : ");
+						list.get(i).put("제목", sc.next());
+						System.out.println("내용 : ");
+						list.get(i).put("내용", sc.next());
+					}
+				}
+				return;
+			case 2: //삭제
+				System.out.println("글을 삭제합니다.");
+				for (int i = 0; i < list.size(); i++) {
+					if ((int)list.get(i).get("번호")==input1) {
+						list.remove(i);
+					}
+				}
+				break;
+			case 3: //목록으로 가기
+				
+				return;
+
+			default:
+				break;
+			}
 		}
 	}
 	private void putData(int number) {
