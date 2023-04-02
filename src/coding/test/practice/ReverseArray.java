@@ -5,6 +5,10 @@ import java.util.Arrays;
 public class ReverseArray {
 	public int[] solution(int[] num_list) {
 		int[] answer= {};
+		
+//		for (int i = 0; i < answer.length; i++) {
+//			answer[i]=num_list.revers();
+//		}
 //		int[] answer= new int [num_list.length];
 //		List<int[]> list=Arrays.asList(num_list);
 //		Collections.reverse(list);
