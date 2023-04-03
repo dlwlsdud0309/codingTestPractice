@@ -8,7 +8,8 @@ public class ReverseArray2 {
 		int[] answer= new int [num_list.length];
 		
 		for (int i = 0; i < num_list.length; i++) {
-			answer[i]=num_list[i]-i-1;
+//			answer[i]=num_list[i]-i-1; //오답
+			answer[i]=num_list[answer.length-1-i];
 		}
 		
 		return answer;
