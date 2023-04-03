@@ -10,7 +10,7 @@ public class ToFindTheMode {
 			}else if (i>0) { //i가 둘 이상인 경우
 				for (int j = 0; j < array.length; j++) {
 					if (array[i]==array[j]) {
-						answer=array[i];
+						answer=array[j];
 					}
 				}
 			}
