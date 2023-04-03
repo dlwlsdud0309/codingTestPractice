@@ -6,9 +6,8 @@ public class AdditionOfFractions {
 	public int[] solution(int numer1, int denom1, int numer2, int denom2) {
         int[] answer = {};
         
-        if (denom1<denom2 && denom2%denom1==0) {
-        	
-		}
+//        if (denom1*denom2 && numer1*denom2 && numer2*denom1) {
+//		}
         
         return answer;
     }
