@@ -11,7 +11,10 @@ public class AvgArray {
 		
 		return answer;
 	}
-//	public static void main(String[] args) {
-//		AvgArray aa=new AvgArray();
-//	}
+	public static void main(String[] args) {
+		AvgArray aa=new AvgArray();
+		int[] numbers= {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+		double answer=(double) aa.solution(numbers);
+		System.out.println(answer);
+	}
 }
