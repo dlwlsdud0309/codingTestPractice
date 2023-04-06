@@ -7,13 +7,11 @@ public class NopeEven {
         int[] answer = {};
         answer=new int [answer.length];
         
-        int tmp=1;
-		for (int i = 0; i <= n; i++) {
+        answer[0]=1;
+        for (int i = 0; i < n; i++) {
 			if (n%2!=0) {
-				tmp+=2;
-				answer[i]=tmp;
-				
-				System.out.println(Arrays.toString(answer));
+				answer[i+1]+=n%2;
+				System.out.println(answer[i]);
 			}
 		}
         return answer;
