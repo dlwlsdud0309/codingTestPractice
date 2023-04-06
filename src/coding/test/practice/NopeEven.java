@@ -5,15 +5,17 @@ import java.util.Arrays;
 public class NopeEven {
 	public int[] solution(int n) {
         int[] answer = {};
+        answer=new int [answer.length];
         
-        if (n%2!=0) {
-			for (int i = 0; i < answer.length; i++) {
-				if (n<answer[i]) {
-					answer[i]=n;
-				}
+        int tmp=1;
+		for (int i = 0; i <= n; i++) {
+			if (n%2!=0) {
+				tmp+=2;
+				answer[i]=tmp;
+				
+				System.out.println(Arrays.toString(answer));
 			}
 		}
-        
         return answer;
     }
 	public static void main(String[] args) {
