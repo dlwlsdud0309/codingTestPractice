@@ -2,11 +2,11 @@ package coding.test.practice;
 
 public class BacterialMultiplication {
 	public int solution(int n, int t) {
-        int answer=0;
+        int answer=n;
 
-        for (int i = 1; i <= t; i++) {
-			n*=2;
-			answer=n;
+//        for (int i = 1; i <= t; i++) {
+    	for (int i = 0; i < t; i++) {
+			answer*=2;
 		}
         
         return answer;
