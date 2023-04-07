@@ -7,13 +7,19 @@ public class AtoB {
         
         for (int i = before.length()-1; i >=0; i--) {
         	str=str+before.charAt(i);
-        	if (str.equals(after)) {
-				answer=1;
-			}else {
-				answer=0;
-			}
+//        	if (str.equals(after)) {
+//				answer=1;
+//			}else if(!str.equals(after)) {
+//				answer=0;
+//			}
 		}
-        
+        if (str.equals(after)) {
+			answer=1;
+		}else {
+			answer=0;
+		}
+        System.out.println(str);
+        System.out.println(after);
         
         return answer;
     }
