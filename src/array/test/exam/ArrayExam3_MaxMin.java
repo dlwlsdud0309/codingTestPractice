@@ -1,6 +1,6 @@
 package array.test.exam;
 
-public class ArrayExam3 {
+public class ArrayExam3_MaxMin {
 	public static void main(String[] args) {
 		//배열의 활용
 		//배열의 요소 중에서 제일 큰 값과 제일 작은 값을 찾기

@@ -2,6 +2,7 @@ package array.test.exam;
 
 public class Chapter5_SumAvg {
 	public static void main(String[] args) {
+		//배열의 활용(1) - 총합과 평균
 		//배열의 모든 요소를 더해서 총합과 평균을 구한다.
 		
 		int sum=0; //총합을 저장하기 위한 변수
