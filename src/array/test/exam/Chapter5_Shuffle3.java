@@ -2,7 +2,7 @@ package array.test.exam;
 
 import java.util.Arrays;
 
-public class Chapter5_OutputOfArray3 {
+public class Chapter5_Shuffle3 {
 	public static void main(String[] args) {
 		int[] numArr= {0,1,2,3,4,5,6,7,8,9};
 		
