@@ -1,6 +1,6 @@
 package array.test.exam;
 
-public class Chapter5_MethodOfStringClass {
+public class Chapter5_MainMethodOfStringClass {
 	public static void main(String[] args) {
 		//String클래스의 주요 메서드
 		
