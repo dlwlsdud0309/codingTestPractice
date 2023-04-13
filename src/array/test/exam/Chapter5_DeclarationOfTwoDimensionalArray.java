@@ -1,6 +1,6 @@
 package array.test.exam;
 
-public class Chapter5_DeclarationOfTwoDimensional {
+public class Chapter5_DeclarationOfTwoDimensionalArray {
 	public static void main(String[] args) {
 		//2차원 배열의 선언
 		//p.147
