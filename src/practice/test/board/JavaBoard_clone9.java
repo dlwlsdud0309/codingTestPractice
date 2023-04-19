@@ -79,6 +79,8 @@ public class JavaBoard_clone9 {
 		}
 	}
 	
+	//list에서 조회 후 수정 및 삭제 실행을 위해서는 글번호에 해당하는 값이 동일 적용되어야 하기 때문에
+	//수정, 삭제 시에도 글번호가 필요하다.
 	public void modifyDeleteList(int input1) {
 		while(true) {
 			System.out.println("1.수정\t2.삭제\t.3.목록");
