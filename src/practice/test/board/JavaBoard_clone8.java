@@ -38,6 +38,9 @@ public class JavaBoard_clone8 {
 			switch (input) {
 			case 1:
 				System.out.println("조회할 게시물 번호 : ");
+				int input1=sc.nextInt();
+				seeListDetail(input1);
+				break;
 			case 2:
 				System.out.println("글을 등록합니다.");
 				number++;
@@ -52,6 +55,27 @@ public class JavaBoard_clone8 {
 			}
 		}
 	}
+	public void seeListDetail(int input1) {
+		for (int i = 0; i < list.size(); i++) {
+			if ((int)list.get(i).get("번호")==input1) { //입력한 값이 list에 저장된 '번호'와 일치한다면
+				//조회할 글의 제목, 내용, 작성자, 작성일 전부 확인하는 페이지
+				System.out.println("제목 : "+list.get(i).get("제목"));
+				System.out.println("제목 : "+list.get(i).get("내용"));
+				System.out.println("제목 : "+list.get(i).get("작성자"));
+				System.out.println("제목 : "+list.get(i).get("작성일"));
+			
+				modifyDeleteList(input1); //확인할 게시물의 번호가 입력되면 실행되는 메소드
+				//modifyDeleteList에도 seeListDetail에서 받은 매개변수 input1값이
+				//들어가야 조회시 "1.수정\t2.삭제\t.3.목록"가 출력된다.
+				return;
+			}
+		}
+	}
+	
+	public void modifyDeleteList(int input1) {
+		
+	}
+	
 	public void putData(int number) {
 		data=new HashMap<String, Object>();
 		
