@@ -62,6 +62,7 @@ public class JavaBoard_clone9 {
 			}
 		}
 	}
+	
 	public void seeListDetail(int input1) {
 		for (int i = 0; i < list.size(); i++) {
 			if ((int)list.get(i).get("번호")==input1) { //입력한 값이 list에 저장된 '번호'와 일치한다면
