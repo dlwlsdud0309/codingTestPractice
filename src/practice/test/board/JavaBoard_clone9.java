@@ -68,9 +68,9 @@ public class JavaBoard_clone9 {
 			if ((int)list.get(i).get("번호")==input1) { //입력한 값이 list에 저장된 '번호'와 일치한다면
 				//조회할 글의 제목, 내용, 작성자, 작성일 전부 확인하는 페이지
 				System.out.println("제목 : "+list.get(i).get("제목"));
-				System.out.println("제목 : "+list.get(i).get("내용"));
-				System.out.println("제목 : "+list.get(i).get("작성자"));
-				System.out.println("제목 : "+list.get(i).get("작성일"));
+				System.out.println("내용 : "+list.get(i).get("내용"));
+				System.out.println("작성자 : "+list.get(i).get("작성자"));
+				System.out.println("작성일 : "+list.get(i).get("작성일"));
 			
 				modifyDeleteList(input1); //확인할 게시물의 번호가 입력되면 실행되는 메소드
 				//modifyDeleteList에도 seeListDetail에서 받은 매개변수 input1값이
@@ -84,7 +84,7 @@ public class JavaBoard_clone9 {
 	//수정, 삭제 시에도 글번호가 필요하다.
 	public void modifyDeleteList(int input1) {
 		while(true) {
-			System.out.println("1.수정\t2.삭제\t.3.목록");
+			System.out.println("1.수정\t2.삭제\t3.목록");
 			int input=sc.nextInt();
 			switch (input) {
 			case 1:
@@ -96,7 +96,7 @@ public class JavaBoard_clone9 {
 				break;
 			case 3:
 				
-				break;
+				return;
 
 			default:
 				break;

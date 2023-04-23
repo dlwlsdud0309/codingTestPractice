@@ -43,8 +43,9 @@ public class JavaBoard_clone8 {
 				break;
 			case 2:
 				System.out.println("글을 등록합니다.");
-				number++;
 				putData(number);
+				number++; //number는 후위연산자
+				list.add(data);
 				break;
 			case 0:
 				System.exit(0);
@@ -60,9 +61,9 @@ public class JavaBoard_clone8 {
 			if ((int)list.get(i).get("번호")==input1) { //입력한 값이 list에 저장된 '번호'와 일치한다면
 				//조회할 글의 제목, 내용, 작성자, 작성일 전부 확인하는 페이지
 				System.out.println("제목 : "+list.get(i).get("제목"));
-				System.out.println("제목 : "+list.get(i).get("내용"));
-				System.out.println("제목 : "+list.get(i).get("작성자"));
-				System.out.println("제목 : "+list.get(i).get("작성일"));
+				System.out.println("내용 : "+list.get(i).get("내용"));
+				System.out.println("작성자 : "+list.get(i).get("작성자"));
+				System.out.println("작성일 : "+list.get(i).get("작성일"));
 			
 				modifyDeleteList(input1); //확인할 게시물의 번호가 입력되면 실행되는 메소드
 				//modifyDeleteList에도 seeListDetail에서 받은 매개변수 input1값이
@@ -73,7 +74,38 @@ public class JavaBoard_clone8 {
 	}
 	
 	public void modifyDeleteList(int input1) {
-		
+		while(true) {
+			System.out.println("1.수정\t2.삭제\t3.목록");
+			int input=sc.nextInt();
+			switch (input) {
+			case 1:
+				modifyData(input);
+				break;
+			case 2:
+				
+				break;
+			case 3:
+				
+				return;
+			default:
+				break;
+			}
+		}
+	}
+	
+	public void modifyData(int input1) {
+		for (int i = 0; i < list.size(); i++) {
+			if ((int)list.get(i).get("번호")==input1) { //여기를 input으로 작성하면 2번 글을 수정했을 때 1번 글이 수정된다.
+				System.out.println("글을 수정합니다.");
+				
+				System.out.println("제목 : ");
+				list.get(i).put("제목", sc.next());
+				System.out.println("내용 : ");
+				list.get(i).put("내용", sc.next());
+				System.out.println("작성자 : ");
+				list.get(i).put("작성자", sc.next());
+			}
+		}
 	}
 	
 	public void putData(int number) {
