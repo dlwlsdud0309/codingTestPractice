@@ -36,9 +36,10 @@ public class JavaBoard_clone6 {
 				System.out.println("조회할 게시물 번호");
 				break;
 			case 2: //이해가 잘 안되고 있다...
-				list.add(data);
 //				listData(input);
+				putData(number);
 				number++;
+				list.add(data);
 				System.out.println("게시물이 등록되었습니다.");
 				return;
 			case 0:
@@ -49,5 +50,9 @@ public class JavaBoard_clone6 {
 				break;
 			}
 		}
+	}
+	
+	public void putData(int number) {
+		
 	}
 }
