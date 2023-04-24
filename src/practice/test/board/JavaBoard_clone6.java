@@ -45,7 +45,7 @@ public class JavaBoard_clone6 {
 				number++;
 				list.add(data);
 				System.out.println("게시물이 등록되었습니다.");
-				return;
+				break; //return이면 안된다
 			case 0:
 				System.exit(0);
 				break;
