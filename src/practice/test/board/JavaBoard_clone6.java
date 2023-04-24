@@ -92,6 +92,21 @@ public class JavaBoard_clone6 {
 		}
 	}
 	
+	public void modifyData(int input1) {
+		for (int i = 0; i < list.size(); i++) {
+			if ((int)list.get(i).get("번호")==input1) { //여기를 input으로 작성하면 2번 글을 수정했을 때 1번 글이 수정된다.
+				System.out.println("글을 수정합니다.");
+				
+				System.out.println("제목 : ");
+				list.get(i).put("제목", sc.next());
+				System.out.println("내용 : ");
+				list.get(i).put("내용", sc.next());
+				System.out.println("작성자 : ");
+				list.get(i).put("작성자", sc.next());
+			}
+		}
+	}
+	
 	public void putData(int number) {
 		data=new HashMap<String, Object>();
 		
