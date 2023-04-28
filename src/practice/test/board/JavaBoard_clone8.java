@@ -81,7 +81,7 @@ public class JavaBoard_clone8 {
 			case 1:
 				modifyData(input);
 				break;
-			case 2:
+			case 2: //등록
 				for (int i = 0; i < list.size(); i++) {
 					if((int)list.get(i).get("번호")==input1) {
 						list.remove(i);
@@ -89,7 +89,7 @@ public class JavaBoard_clone8 {
 				}
 				System.out.println("글을 삭제합니다.");
 				return;
-			case 3:
+			case 3: //목록
 				
 				return;
 			default:
