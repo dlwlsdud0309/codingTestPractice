@@ -78,14 +78,17 @@ public class JavaBoard_clone11 {
 		
 		switch (input) {
 		case 1:
-			System.out.println("글을 수정합니다.");
 
 			for (int i = 0; i < list.size(); i++) {
 				if((int)list.get(i).get("번호")==input1) {
+					System.out.println("글을 수정합니다.");
+
 					System.out.println("제목 : ");
-					data.put("제목", sc.next());
+					//data.put("제목", sc.next());
+					list.get(i).put("제목", sc.next());
 					System.out.println("내용 : ");
-					data.put("내용", sc.next());
+					//data.put("내용", sc.next());
+					list.get(i).put("내용", sc.next());
 				}
 			}
 			break;
@@ -94,10 +97,11 @@ public class JavaBoard_clone11 {
 			
 			for (int i = 0; i < list.size(); i++) {
 				if((int)list.get(i).get("번호")==input1) {
-					data.remove(i);
+					//data.remove(i);
+					list.remove(i);
 				}
 			}
-			break;
+			return;
 		case 3:
 			
 			return;
