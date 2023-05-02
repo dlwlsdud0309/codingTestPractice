@@ -38,6 +38,8 @@ public class JavaBoard_clone11 {
 			switch (input) {
 			case 1:
 				System.out.println("조회할 게시글 번호 : ");
+				int input1=sc.nextInt();
+				seeDetail(input1);
 				break;
 			case 2:
 				putData(number);
@@ -54,6 +56,24 @@ public class JavaBoard_clone11 {
 				break;
 			}
 		}
+	}
+	
+	public void seeDetail(int input1) {
+		System.out.println("글을 조회합니다.");
+		for (int i = 0; i < list.size(); i++) {
+			if((int)list.get(i).get("번호")==input1) {
+				System.out.println("제목 : "+list.get(i).get("제목"));
+				System.out.println("내용 : "+list.get(i).get("내용"));
+				System.out.println("작성자 : "+list.get(i).get("작성자"));
+				System.out.println("작성일 : "+list.get(i).get("작성일"));
+			
+				modifyDeleteList(input1);
+			}
+		}
+	}
+	
+	public void modifyDeleteList(int input1) {
+		
 	}
 	
 	public void putData(int number) {
