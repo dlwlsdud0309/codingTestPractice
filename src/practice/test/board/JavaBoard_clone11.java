@@ -1,6 +1,8 @@
 package practice.test.board;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -22,6 +24,14 @@ public class JavaBoard_clone11 {
 			System.out.println("NO\tTITLE\tWRITER\tDATE");
 			System.out.println("===========================");
 		
+			for (int i = list.size()-1; i >=0; i--) {
+				System.out.print(list.get(i).get("번호"));
+				System.out.print("\t"+list.get(i).get("제목"));
+				System.out.print("\t"+list.get(i).get("작성자"));
+				System.out.print("\t"+list.get(i).get("작성일"));
+				System.out.println();
+				System.out.println("--------------------------");
+			}
 			
 			System.out.println("1.조회\t2.등록\t0.종료");
 			int input=sc.nextInt();
@@ -52,6 +62,14 @@ public class JavaBoard_clone11 {
 		data.put("번호", number);
 		
 		System.out.println("제목 : ");
+		data.put("제목", sc.next());
+		System.out.println("내용 : ");
+		data.put("내용", sc.next());
+		System.out.println("작성자 : ");
+		data.put("작성자", sc.next());
 		
+		Date date=new Date();
+		SimpleDateFormat sdf=new SimpleDateFormat("yy-MM-dd");
+		data.put("작성일", sdf.format(date));
 	}
 }
