@@ -42,6 +42,8 @@ public class JavaBoard_clone12 {
 			switch (input) {
 			case 1: //조회
 				System.out.println("조회할 글 번호 : ");
+				int input1=sc.nextInt();
+				seeDetail(input1);
 				break;
 			case 2: //등록
 				putData(number);
@@ -55,6 +57,53 @@ public class JavaBoard_clone12 {
 			default:
 				break;
 			}
+		}
+	}
+	
+	public void seeDetail(int input1) {
+		System.out.println(input1+"번 게시글을 조회합니다.");
+//		while(true) { //while(true)를 사용하면 콘솔창이 무한대로 돌아가는 것을 확인..
+			for (int i = 0; i < list.size(); i++) {
+				if((int)list.get(i).get("번호")==input1) {
+					System.out.println("제목 : "+list.get(i).get("제목"));
+					System.out.println("내용 : "+list.get(i).get("내용"));
+					System.out.println("작성자 : "+list.get(i).get("작성자"));
+					System.out.println("작성일 : "+list.get(i).get("작성일"));
+				
+					System.out.println("1.수정\t2.삭제\t3.목록");
+					modifyDeleteList(input1);
+				}
+			}
+//		}
+	}
+	
+	public void modifyDeleteList(int input1) {
+		int input=sc.nextInt();
+		switch (input) {
+		case 1:
+			System.out.println("글을 수정합니다.");
+			for (int i = 0; i < list.size(); i++) {
+				if((int)list.get(i).get("번호")==input1) {
+					System.out.println("제목 : ");
+					data.put("제목", sc.next());
+					System.out.println("내용 : ");
+					data.put("내용", sc.next());
+				}
+			}
+			break;
+		case 2:
+			for (int i = 0; i < list.size(); i++) {
+				if((int)list.get(i).get("번호")==input1) {
+					list.remove(i);
+				}
+			}
+			break;
+		case 3:
+			
+			return;
+
+		default:
+			break;
 		}
 	}
 	
