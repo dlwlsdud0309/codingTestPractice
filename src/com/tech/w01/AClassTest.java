@@ -1,4 +1,4 @@
-package practice.test.cal;
+package com.tech.w01;
 
 public class AClassTest extends AClass{
 	public static void main(String[] args) {

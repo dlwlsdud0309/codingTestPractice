@@ -1,4 +1,4 @@
-package practice.test.cal;
+package com.tech.w01;
 
 public class AClass {
 	private int i=1;
