@@ -63,8 +63,8 @@ public class CalExam3_actionListner extends JFrame implements ActionListener{
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		
+		System.out.println("신호");
+		System.out.println(e.getActionCommand());
 	}
 
 	public static void main(String[] args) {
