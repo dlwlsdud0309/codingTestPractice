@@ -61,14 +61,27 @@ public class CalExam3_actionListner extends JFrame implements ActionListener{
 		setVisible(true);
 	}
 	
+	private double result=0; //결과값, 0.0해도 됨
+	private String operator="=";
+	private boolean startNumber=true;
+	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 //		System.out.println("신호");
 //		System.out.println(e.getActionCommand());
 	
 		String command=e.getActionCommand();
-		String str="abc";
-		System.out.println(str.charAt(0));
+//		String str="abc";
+//		System.out.println(str.charAt(0));
+	
+		if (command.charAt(0)=='C') { //index가 0인 값이 C
+			startNumber=true; //startNumber를 누르면 무조건 true로 변환되도록
+			result=0;
+			operator="=";
+			tField.setText("0.0");
+		}else if(command.charAt(0)>='0' && command.charAt(0)<='9' || command.equals(".")) {
+			//0과 9는 아스키코드
+		}
 	}
 
 	public static void main(String[] args) {
