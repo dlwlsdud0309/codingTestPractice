@@ -18,7 +18,7 @@ public class CalExam3_actionListner extends JFrame implements ActionListener{
 	private String[] labels= {
 		"backspace","","","CE","C",
 		"7","8","9","/","sqrt",
-		"4","5","6","x","%",
+		"4","5","6","*","%",
 		"1","2","3","-","1/x",
 		"0","+/-",".","+","="	
 	};
@@ -81,6 +81,43 @@ public class CalExam3_actionListner extends JFrame implements ActionListener{
 			tField.setText("0.0");
 		}else if(command.charAt(0)>='0' && command.charAt(0)<='9' || command.equals(".")) {
 			//0과 9는 아스키코드
+			//숫자입력이 시작인지
+			if(startNumber==true) { //startNumber가 시작이면 true
+				tField.setText(command);
+			}else {
+				tField.setText(tField.getText()+command);
+			}
+			startNumber=false;
+		}else {
+			if (startNumber) { //음수상태 구분
+				if(command.equals("-")) { //음수입력
+					tField.setText(command);
+					startNumber=false;
+				}else {
+					operator=command;
+				}
+			}else { //계산
+				Double x=Double.parseDouble(tField.getText());
+				
+				calculate(x);
+				tField.setText(""+result);
+				operator=command;
+				startNumber=true;
+			}
+		}
+	}
+
+	private void calculate(Double x) {
+		if(operator.equals("+")) {
+			result=result+x;
+		}else if(operator.equals("-")) {
+			result=result-x;
+		}else if(operator.equals("*")) {
+			result=result*x;
+		}else if(operator.equals("/")) {
+			result=result/x;
+		}else if(operator.equals("=")) {
+			result=x;
 		}
 	}
 
