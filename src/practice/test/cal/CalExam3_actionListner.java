@@ -63,8 +63,12 @@ public class CalExam3_actionListner extends JFrame implements ActionListener{
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		System.out.println("신호");
-		System.out.println(e.getActionCommand());
+//		System.out.println("신호");
+//		System.out.println(e.getActionCommand());
+	
+		String command=e.getActionCommand();
+		String str="abc";
+		System.out.println(str.charAt(0));
 	}
 
 	public static void main(String[] args) {
