@@ -10,6 +10,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class Calculator extends JFrame{
+	//참조 : https://www.youtube.com/watch?v=zFAPpiL17ow&t=17s
 	
 	private JTextField inputSpace;
 	
