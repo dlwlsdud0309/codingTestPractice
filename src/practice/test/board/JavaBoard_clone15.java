@@ -1,6 +1,8 @@
 package practice.test.board;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -31,7 +33,9 @@ public class JavaBoard_clone15 {
 				System.out.println("조회할 게시글 번호 : ");
 				break;
 			case 2:
-				
+				putData(number);
+				number++;
+				list.add(data);
 				break;
 			case 0:
 				System.out.println("JavaBoard exit");
@@ -42,5 +46,23 @@ public class JavaBoard_clone15 {
 				break;
 			}
 		}
+	}
+	
+	private void putData(int number) {
+		data=new HashMap<String, Object>();
+		
+		data.put("번호", number);
+		
+		System.out.println("제목 : ");
+		data.put("제목", sc.next());
+		
+		System.out.println("내용 : ");
+		data.put("내용", sc.next());
+		
+		System.out.println("작성자 : ");
+		data.put("작성자", sc.next());
+		
+		Date date=new Date();
+		SimpleDateFormat sdf=new SimpleDateFormat("yy-MM-dd");
 	}
 }
