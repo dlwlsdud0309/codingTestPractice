@@ -29,8 +29,8 @@ public class ChangeCalExam extends JFrame implements ActionListener{
 		setTitle("계산기");
 		
 		setSize(300, 370);
-		setLocationRelativeTo(null);
-		setResizable(false);
+		setLocationRelativeTo(null); //실행 시 중앙에 위치
+		setResizable(false); //크기 조정 불가, true는 가능
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		tField=new JTextField();
@@ -55,9 +55,9 @@ public class ChangeCalExam extends JFrame implements ActionListener{
 			buttons[i].setFont(new Font("Arial",Font.BOLD,20));
 			
 			if(button_names[i]=="C") {
-				tField.setText("0.0");;
+				tField.setText("0.0");
 				buttons[i].setBackground(Color.red);
-			}else if((i>=4 || i<=6) || (i>=8 || i<=10) || (i>=12 && i<=14)) {
+			}else if((i>=4 && i<=6) || (i>=8 && i<=10) || (i>=12 && i<=14)) {
 				buttons[i].setBackground(Color.black);
 			}else {
 				buttons[i].setBackground(Color.gray);

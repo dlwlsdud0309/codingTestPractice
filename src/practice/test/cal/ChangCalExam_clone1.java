@@ -45,6 +45,29 @@ public class ChangCalExam_clone1 extends JFrame{
 		
 		buttons = new JButton[button_names.length];
 		
+		//반복문 사용하여 버튼 부착
+		for (int i = 0; i < button_names.length; i++) {
+			buttons[i] = new JButton(button_names[i]);
+			
+			buttons[i].setFont(new Font("Arial",Font.BOLD,20));
+			
+			if (button_names[i]=="C") {
+				tField.setText("0.0");
+				buttons[i].setBackground(Color.red);
+			}else if((i>=4 && i<=6) || (i>=8 && i<=10) || (i>=12 && i<=14)) {
+				buttons[i].setBackground(Color.black);
+			}else {
+				buttons[i].setBackground(Color.gray);
+			}
+			buttons[i].setForeground(Color.white); //글씨색
+			buttons[i].setBorderPainted(false); //테두리 없애기
+			
+			panel.add(buttons[i]);
+		}
+		
+		add(tField);
+		add(panel);
+		
 		setVisible(true);
 	}
 	
