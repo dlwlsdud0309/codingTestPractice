@@ -1,6 +1,7 @@
 package practice.test.cal;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
@@ -11,7 +12,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class CalExam_clone1 extends JFrame implements ActionListener{
+public class ChangeCalExam extends JFrame implements ActionListener{
 
 	private JPanel panel;
 	private JTextField tField;
@@ -22,7 +23,7 @@ public class CalExam_clone1 extends JFrame implements ActionListener{
 			"."
 		};
 	
-	public CalExam_clone1() {
+	public ChangeCalExam() {
 		setLayout(null);
 		
 		setTitle("계산기");
@@ -41,8 +42,7 @@ public class CalExam_clone1 extends JFrame implements ActionListener{
 		
 		panel=new JPanel();
 		panel.setLayout(new GridLayout(0,4,10,10)); //차례대로 가로, 새로, 좌우간격, 상하간격
-		panel.setBounds(8, 90, 270, 235);
-		
+		panel.setBounds(8,90,270,235);
 		
 		buttons=new JButton[button_names.length];
 //		int index=0;
@@ -55,6 +55,7 @@ public class CalExam_clone1 extends JFrame implements ActionListener{
 			buttons[i].setFont(new Font("Arial",Font.BOLD,20));
 			
 			if(button_names[i]=="C") {
+				tField.setText("0.0");;
 				buttons[i].setBackground(Color.red);
 			}else if((i>=4 || i<=6) || (i>=8 || i<=10) || (i>=12 && i<=14)) {
 				buttons[i].setBackground(Color.black);
@@ -67,6 +68,7 @@ public class CalExam_clone1 extends JFrame implements ActionListener{
 			panel.add(buttons[i]);
 //			index++;
 		}
+		
 	
 		add(tField);
 		add(panel);
@@ -131,6 +133,6 @@ public class CalExam_clone1 extends JFrame implements ActionListener{
 	}
 	
 	public static void main(String[] args) {
-		new CalExam_clone1();
+		new ChangeCalExam();
 	}
 }
