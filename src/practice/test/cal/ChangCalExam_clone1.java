@@ -3,13 +3,15 @@ package practice.test.cal;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class ChangCalExam_clone1 extends JFrame{
+public class ChangCalExam_clone1 extends JFrame implements ActionListener{
 	private JPanel panel;
 	private JTextField tField;
 	private JButton[] buttons;
@@ -49,6 +51,8 @@ public class ChangCalExam_clone1 extends JFrame{
 		for (int i = 0; i < button_names.length; i++) {
 			buttons[i] = new JButton(button_names[i]);
 			
+			buttons[i].addActionListener(this);
+			
 			buttons[i].setFont(new Font("Arial",Font.BOLD,20));
 			
 			if (button_names[i]=="C") {
@@ -71,7 +75,59 @@ public class ChangCalExam_clone1 extends JFrame{
 		setVisible(true);
 	}
 	
+	private double result=0;
+	private String operator="=";
+	private boolean startNumber=true;
+	
+	
 	public static void main(String[] args) {
 		new ChangCalExam_clone1();
+	}
+
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		String command=e.getActionCommand();
+		
+		if (command.equals("C")) {
+			startNumber=true;
+			result=0;
+			operator="=";
+			tField.setText("0.0");
+		}else if(command.charAt(0)>='0' && command.charAt(0)<='9' || command.equals(".")) {
+			if(startNumber==true) {
+				tField.setText(command);
+			}else {
+				tField.setText(tField.getText()+command);
+			}
+			startNumber=false;
+		}else {
+			if(startNumber) { //음수 상태 구분
+				if(command.equals("-")) {
+					tField.setText(command);
+					startNumber=false;
+				}else {
+					operator=command;
+				}
+			}else {
+				Double x=Double.parseDouble(tField.getText());
+				
+				if(operator.equals("+")) {
+					result=result+x;
+				}else if(operator.equals("-")) {
+					result=result-x;
+				}else if(operator.equals("*")) {
+					result=result*x;
+				}else if(operator.equals("/")) {
+					result=result/x;
+				}else if(operator.equals("=")) {
+					result=x;
+				}
+				
+				tField.setText(""+result);
+				operator=command;
+				startNumber=true;
+			}
+		}
 	}
 }
