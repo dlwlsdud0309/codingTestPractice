@@ -11,7 +11,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class ChangCalExam_clone1 extends JFrame implements ActionListener{
+public class ChangeCalExam_clone1 extends JFrame implements ActionListener{
 	private JPanel panel;
 	private JTextField tField;
 	private JButton[] buttons;
@@ -25,7 +25,7 @@ public class ChangCalExam_clone1 extends JFrame implements ActionListener{
 		"0","."
 	};
 	
-	public ChangCalExam_clone1() {
+	public ChangeCalExam_clone1() {
 		setLayout(null);
 		
 		setTitle("계산기");
@@ -81,7 +81,7 @@ public class ChangCalExam_clone1 extends JFrame implements ActionListener{
 	
 	
 	public static void main(String[] args) {
-		new ChangCalExam_clone1();
+		new ChangeCalExam_clone1();
 	}
 
 
