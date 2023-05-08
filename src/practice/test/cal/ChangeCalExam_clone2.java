@@ -100,7 +100,7 @@ public class ChangeCalExam_clone2 extends JFrame implements ActionListener{
 			operator="=";
 			tField.setText("0.0");
 		}else if(command.charAt(0)>='0' && command.charAt(0)<='9' || command.equals(".")) {
-			if(startNumber=true) {
+			if(startNumber==true) { //'='일 경우 일의 자리 이상으로 출력되지 않음, '=='이어야함
 				tField.setText(command);
 			}else {
 				tField.setText(tField.getText()+command);
