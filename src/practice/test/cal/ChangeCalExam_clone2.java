@@ -117,22 +117,26 @@ public class ChangeCalExam_clone2 extends JFrame implements ActionListener{
 			}else {
 				Double x=Double.parseDouble(tField.getText());
 				
-				if(operator.equals("+")) {
-					result=result+x;
-				}else if(operator.equals("-")) {
-					result=result-x;
-				}else if(operator.equals("*")) {
-					result=result*x;
-				}else if(operator.equals("/")) {
-					result=result/x;
-				}else if(operator.equals("=")) {
-					result=x;
-				}
+				calculator(x);
 				
 				tField.setText(""+result);
 				operator=command;
 				startNumber=true;
 			}
+		}
+	}
+
+	private void calculator(Double x) {
+		if(operator.equals("+")) {
+			result=result+x;
+		}else if(operator.equals("-")) {
+			result=result-x;
+		}else if(operator.equals("*")) {
+			result=result*x;
+		}else if(operator.equals("/")) {
+			result=result/x;
+		}else if(operator.equals("=")) {
+			result=x;
 		}
 	}
 	
