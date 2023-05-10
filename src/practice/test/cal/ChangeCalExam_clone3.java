@@ -10,6 +10,20 @@ public class ChangeCalExam_clone3 extends JFrame{
 	private JTextField tField;
 	private JButton[] buttons;
 	private String[] button_names= {
-			
+		"C","/","*","=",
+		"7","8","9",
+		"+",
+		"4","5","6",
+		"-",
+		"1","2","3",
+		"0","."
 	};
+	
+	public ChangeCalExam_clone3() {
+		setLayout(null);
+	}
+	
+	public static void main(String[] args) {
+		new ChangeCalExam_clone3();
+	}
 }
