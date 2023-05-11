@@ -21,6 +21,14 @@ public class ChangeCalExam_clone3 extends JFrame{
 	
 	public ChangeCalExam_clone3() {
 		setLayout(null);
+		
+		setTitle("계산기");
+		setSize(300,370);
+		setLocationRelativeTo(null); //실행 시 중앙에 위치
+		setResizable(false); //크기 조정 불가능
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		setVisible(true);
 	}
 	
 	public static void main(String[] args) {
