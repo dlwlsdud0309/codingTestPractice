@@ -28,6 +28,10 @@ public class ChangeCalExam_clone3 extends JFrame{
 		setResizable(false); //크기 조정 불가능
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
+		//JTextField
+		tField = new JTextField();
+		tField.setEditable(false);
+		
 		setVisible(true);
 	}
 	
