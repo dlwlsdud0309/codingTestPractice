@@ -42,6 +42,7 @@ public class ChangeCalExam_clone3 extends JFrame{
 		
 		add(tField);
 		
+		
 		//JPanel
 		panel = new JPanel();
 		panel.setLayout(new GridLayout(0,4,10,10)); //가로, 세로, 좌우간격, 상하간격
@@ -49,9 +50,30 @@ public class ChangeCalExam_clone3 extends JFrame{
 		
 		add(panel);
 		
+		
+		//JButton, 길이지정
+		//int[] score;
+		//score = new int[length];
+		buttons = new JButton[button_names.length]; //private JButton[] buttons;
+		
 		//반복문 사용하여 버튼 부착
 		for (int i = 0; i < button_names.length; i++) {
 			buttons[i] = new JButton(button_names[i]);
+			
+			buttons[i].setFont(new Font("Arial",Font.BOLD,20));
+			
+			//버튼에 색 지정
+			if (button_names[i]=="C") {
+				tField.setText("0.0");
+				buttons[i].setBackground(Color.red);
+			}else if((i>=4 && i<=6) || (i>=8 && i<=10) || (i>=12 && i<=14)) {
+				buttons[i].setBackground(Color.black);
+			}else {
+				buttons[i].setBackground(Color.gray);
+			}
+			buttons[i].setForeground(Color.white);
+			buttons[i].setBorderPainted(false);
+			panel.add(buttons[i]);
 		}
 		setVisible(true);
 	}
