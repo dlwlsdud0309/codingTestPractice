@@ -3,13 +3,15 @@ package practice.test.cal;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class ChangeCalExam_clone4 extends JFrame{
+public class ChangeCalExam_clone4 extends JFrame implements ActionListener{
 	private JPanel panel;
 	private JTextField tField;
 	private JButton[] buttons;
@@ -48,7 +50,7 @@ public class ChangeCalExam_clone4 extends JFrame{
 		buttons = new JButton[button_names.length];
 		for (int i = 0; i < button_names.length; i++) {
 			buttons[i] = new JButton(button_names[i]);
-			//addActionListener
+			buttons[i].addActionListener(this);
 			buttons[i].setFont(new Font("Arial",Font.BOLD,20)); //버튼 숫자크기
 			
 			if (button_names[i]=="C") {
@@ -68,6 +70,16 @@ public class ChangeCalExam_clone4 extends JFrame{
 		add(panel);
 		
 		setVisible(true);
+	}
+	
+	private double result = 0;
+	private String operator = "=";
+	private boolean startNumber = true;
+	
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		String command = e.getActionCommand();
+		System.out.println(command);
 	}
 	
 	public static void main(String[] args) {
