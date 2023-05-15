@@ -79,7 +79,48 @@ public class ChangeCalExam_clone4 extends JFrame implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		String command = e.getActionCommand();
-		System.out.println(command);
+//		System.out.println(command);
+		
+		if(command.equals("C")) {
+			startNumber = true;
+			result = 0;
+			operator = "=";
+			tField.setText("0.0");
+		}else if(command.charAt(0)>='0' && command.charAt(0)<='9' || command.equals(".")) {
+			if(startNumber==true) {
+				tField.setText(command);
+			}else {
+				tField.setText(tField.getText()+command);
+			}
+			startNumber = false;
+		}else {
+			if(startNumber) {
+				if (command.equals("-")) {
+					tField.setText(command);
+					startNumber = false;
+				}else {
+					operator = command;
+				}
+			}else {
+				Double x = Double.parseDouble(tField.getText());
+				
+				if(operator.equals("+")) {
+					result=result+x;
+				}else if(operator.equals("-")) {
+					result=result-x;
+				}else if(operator.equals("*")) {
+					result=result*x;
+				}else if(operator.equals("/")) {
+					result=result/x;
+				}else if(operator.equals("=")) {
+					result=x;
+				}
+				
+				tField.setText(""+result);
+				operator = command;
+				startNumber = true;
+			}
+		}
 	}
 	
 	public static void main(String[] args) {
