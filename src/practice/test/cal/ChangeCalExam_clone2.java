@@ -49,7 +49,7 @@ public class ChangeCalExam_clone2 extends JFrame implements ActionListener{
 		//JPanel
 		panel = new JPanel();
 		panel.setLayout(new GridLayout(0, 4, 10, 10)); //가로, 세로, 좌우간격, 상하간격
-//		panel.setBackground(Color.cyan);
+		panel.setBackground(Color.cyan);
 		panel.setBounds(8, 90, 270, 235);
 		
 		add(panel);
