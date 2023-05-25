@@ -62,6 +62,7 @@ public class JavaBoard_clone18 {
 	private void seeDetail(int input1) {
 		for (int i = 0; i < list.size(); i++) {
 			if((int)list.get(i).get("번호")==input1) {
+				System.out.println("번호 : "+list.get(i).get("번호"));
 				System.out.println("제목 : "+list.get(i).get("제목"));
 				System.out.println("내용 : "+list.get(i).get("내용"));
 				System.out.println("작성자 : "+list.get(i).get("작성자"));
@@ -74,6 +75,36 @@ public class JavaBoard_clone18 {
 	
 	private void modifyDeleteList(int input1) {
 		System.out.println("1.수정\t2.삭제\t3.목록");
+		int input = sc.nextInt();
+		switch (input) {
+		case 1:
+			System.out.println("글을 수정합니다.");
+			
+			for (int i = 0; i < list.size(); i++) {
+				if((int)list.get(i).get("번호")==input1) {
+					System.out.println("제목 : ");
+					list.get(i).put("제목", sc.next());
+					System.out.println("내용 : ");
+					list.get(i).put("내용", sc.next());
+				}
+			}
+			break;
+		case 2:
+			System.out.println("글을 삭제합니다.");
+			
+			for (int i = 0; i < list.size(); i++) {
+				if((int)list.get(i).get("번호")==input1) {
+					list.remove(i);
+				}
+			}
+			break;
+		case 3:
+			
+			return;
+
+		default:
+			break;
+		}
 	}
 	
 	private void putData(int number) {
