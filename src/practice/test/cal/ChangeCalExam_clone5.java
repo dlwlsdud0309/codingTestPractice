@@ -104,7 +104,7 @@ public class ChangeCalExam_clone5 extends JFrame implements ActionListener{
 			}
 			startNumber = false;
 		}else {
-			if(startNumber) {
+			if(startNumber) { //음수상태 구분
 				if(command.equals("-")) {
 					tField.setText(command);
 					startNumber = false;
