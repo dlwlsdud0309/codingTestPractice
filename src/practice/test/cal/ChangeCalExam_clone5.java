@@ -3,13 +3,15 @@ package practice.test.cal;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class ChangeCalExam_clone5 extends JFrame{
+public class ChangeCalExam_clone5 extends JFrame implements ActionListener{
 	private JPanel panel;
 	private JTextField tField;
 	private JButton[] buttons;
@@ -60,7 +62,7 @@ public class ChangeCalExam_clone5 extends JFrame{
 		//반복문 사용하여 버튼 부착
 		for (int i = 0; i < button_names.length; i++) {
 			buttons[i] = new JButton(button_names[i]);
-//			buttons[i].addActionListener(this);
+			buttons[i].addActionListener(this);
 			buttons[i].setFont(new Font("Arial",Font.BOLD,20));
 		
 			//버튼에 색 지정
@@ -80,7 +82,58 @@ public class ChangeCalExam_clone5 extends JFrame{
 		setVisible(true);
 	}
 	
+	private double result = 0;
+	private String operator = "=";
+	private boolean startNumber = true;
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		String command = e.getActionCommand();
+		//System.out.println(command);
+		
+		if(command.equals("C")) {
+			startNumber = true;
+			result = 0;
+			operator = "=";
+			tField.setText("0.0");
+		}else if(command.charAt(0)>='0' && command.charAt(0)<='9' || command.equals(".")) {
+			if(startNumber==true) {
+				tField.setText(command);
+			}else {
+				tField.setText(tField.getText()+command);
+			}
+			startNumber = false;
+		}else {
+			if(startNumber) {
+				if(command.equals("-")) {
+					tField.setText(command);
+					startNumber = false;
+				}else {
+					operator = command;
+				}
+			}else {
+				Double x = Double.parseDouble(tField.getText());
+				
+				if(operator.equals("+")) {
+					result = result+x;
+				}else if(operator.equals("-")) {
+					result = result-x;
+				}else if(operator.equals("*")) {
+					result = result*x;
+				}else if(operator.equals("/")) {
+					result = result/x;
+				}else if(operator.equals("=")) {
+					result = x;
+				}
+				tField.setText(""+result);
+				operator = command;
+				startNumber = true;
+			}
+		}
+	}
+	
 	public static void main(String[] args) {
 		new ChangeCalExam_clone5();
 	}
+
 }
