@@ -1,0 +1,16 @@
+package coding.test.practice;
+
+import java.util.Arrays;
+
+public class IceAmericanoOfMussc_review {
+	public int[] solution(int money) {
+        int[] answer = new int[2];
+        
+        return answer;
+    }
+	public static void main(String[] args) {
+		IceAmericanoOfMussc_review ir = new IceAmericanoOfMussc_review();
+		int[] answer = ir.solution(0);
+		System.out.println(Arrays.toString(answer));
+	}
+}
