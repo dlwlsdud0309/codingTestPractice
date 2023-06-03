@@ -16,6 +16,12 @@ public class JavaBoard_clone20 {
 	}
 	
 	private void seeBoard() {
+		int number = 1;
 		
+		while(true) {
+			System.out.println("===========================================");
+			System.out.println("NO\tTITLE\tWRITER\tDATE");
+			System.out.println("===========================================");
+		}
 	}
 }
