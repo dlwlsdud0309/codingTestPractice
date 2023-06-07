@@ -3,7 +3,7 @@ package coding.test.practice;
 import java.util.Scanner;
 
 public class PrintAandB {
-	//코딩 기초 테스트
+	//코딩 기초 트레이닝
 	//a와 b 출력하기
 	public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
