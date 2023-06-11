@@ -7,10 +7,10 @@ public class ReturnResultValueAccordingToTheFlag {
 	public int solution(int a, int b, boolean flag) {
         int answer = 0;
         
-        if(flag=true) {
-        	a+b=answer;
+        if(flag==true) {
+        	answer=a+b;
         }else {
-        	a-b=answer;
+        	answer=a-b;
         }
         
         return answer;
