@@ -8,8 +8,8 @@ public class MultiplyTheString {
         String answer = "";
 		
         for (int i = 0; i < k; i++) {
-        	//System.out.print(my_string);
-        	answer += my_string;
+        	System.out.print(my_string);
+//        	answer += my_string; //정답
         }
         
         return answer;
@@ -17,7 +17,7 @@ public class MultiplyTheString {
 	
 	public static void main(String[] args) {
 		MultiplyTheString mts = new MultiplyTheString();
-		String result = mts.solution("string", 3);
+		String result = mts.solution("love", 10);
 		System.out.println(result);
 	}
 	
