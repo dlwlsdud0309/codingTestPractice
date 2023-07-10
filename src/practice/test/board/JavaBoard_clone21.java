@@ -21,6 +21,25 @@ public class JavaBoard_clone21 {
 			System.out.println("===========================================");
 			System.out.println("NO\tTITLE\tWRITER\tDATE");
 			System.out.println("===========================================");
+
+			int input = sc.nextInt();
+			
+			switch (input) {
+			case 1: //검색
+				
+				break;
+			case 2: //등록
+				
+				break;
+			case 3:
+				System.out.println("JavaBoard exit");
+				System.exit(0);
+				break;
+				
+			default:
+				break;
+			}
 		}
+		
 	}
 }
