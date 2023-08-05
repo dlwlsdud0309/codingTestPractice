@@ -26,10 +26,10 @@ public class JavaBoard_clone21 {
 			
 			switch (input) {
 			case 1: //검색
-				
 				break;
 			case 2: //등록
-				
+				System.out.println("글을 등록합니다.");
+					
 				break;
 			case 3:
 				System.out.println("JavaBoard exit");
