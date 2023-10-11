@@ -16,6 +16,10 @@ public class Barista {
 		this.salary = salary;
 	}
 	
+	public Barista() {
+		//Main.java에서 파라미터가 없는, 즉 기본 생성자를 이용할 경우 명시해주어야한다.
+	}
+	
 	public void makeCoffee(OrderSheet order) {
 		if (order.isCompleted == true) {
 			return;
