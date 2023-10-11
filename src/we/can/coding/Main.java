@@ -19,5 +19,14 @@ public class Main {
 		//생성자 함수를 사용하면 한 줄 표현이 가능하다.
 		Barista baristaChui2 = new Barista("최지우",600);
 		baristaChui2.showInfo();
+		
+		
+		System.out.println("========================");
+		OrderSheet test1 = new OrderSheet(4); //커피의 개수 4 = coffeeNum
+		test1.showInfo();
+		
+//		System.out.println(Barista.name); //오류
+		System.out.println(baristaGu.name); //구슬기
+		System.out.println(OrderSheet.serialNum); //static serialNum이기 때문에 바로 사용 가능
 	}
 }
