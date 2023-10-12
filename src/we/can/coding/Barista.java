@@ -3,7 +3,7 @@ package we.can.coding;
 public class Barista {
 	String name;
 	int salary;
-	int coffeeTotalNum;
+	int coffeeTotalNum; //총 만든 커피의 잔 수
 	
 	public Barista(String name) {
 		this.name = name;
@@ -20,9 +20,9 @@ public class Barista {
 		//Main.java에서 파라미터가 없는, 즉 기본 생성자를 이용할 경우 명시해주어야한다.
 	}
 	
-	public void makeCoffee(OrderSheet order) {
-		if (order.isCompleted == true) {
-			return;
+	public void makeCoffee(OrderSheet order) { //주문서를 받고 해당 주문서만 처리하는 개념
+		if (order.isCompleted == true) { //주문서의 완료 여부가 true이면 이미 완료된 주문 건이므로 함수 종료
+			return; //안정성을 증가시키기 위한 '방어코드'
 		}
 		
 		order.isCompleted = true;
