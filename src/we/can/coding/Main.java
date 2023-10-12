@@ -28,5 +28,10 @@ public class Main {
 //		System.out.println(Barista.name); //오류
 		System.out.println(baristaGu.name); //구슬기
 		System.out.println(OrderSheet.serialNum); //static serialNum이기 때문에 바로 사용 가능
+	
+		
+		System.out.println("========================");
+		Casher casherShin = new Casher("Shin Coding");
+		casherShin.showInfo();
 	}
 }
