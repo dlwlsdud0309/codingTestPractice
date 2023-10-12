@@ -13,7 +13,7 @@ public class Casher {
 	//커피가 몇 잔인지 주문을 받고 주문서를 생성하는 메서드
 	public OrderSheet makeOrderSheet(int coffeeNum) { //coffeeNum : 커피의 개수
 		
-		OrderSheet order = new OrderSheet(coffeeNum);
+		OrderSheet order = new OrderSheet(coffeeNum); //주문받은 커피의 개수를 받아 주문서 생성
 		orderTotalNum++;
 		return order;
 	}
