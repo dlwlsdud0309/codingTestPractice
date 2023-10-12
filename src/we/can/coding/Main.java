@@ -2,6 +2,31 @@ package we.can.coding;
 
 public class Main {
 	public static void main(String[] args) {
+		
+		Casher casherGu = new Casher("Gu");
+		Barista baristaLee = new Barista("Lee");
+		
+		casherGu.showInfo();
+		baristaLee.showInfo();
+		System.out.println("===========================");
+		OrderSheet order1 = casherGu.makeOrderSheet(4);
+		
+		order1.showInfo();
+		casherGu.showInfo();
+		System.out.println("===========================");
+
+		baristaLee.makeCoffee(order1);
+		order1.showInfo();
+		baristaLee.showInfo();
+		
+//		System.out.println("이미 완료가 된 주문서를 바리스타에게 넘겼을 경우 : ");
+//		baristaLee.makeCoffee(order1);
+//		baristaLee.showInfo(); //커피의 잔 수가 증가하지 않은 것을 확인할 수 있음
+		
+		
+		
+		
+		
 //		Barista baristaGu = new Barista("구슬기");
 //		baristaGu.showInfo();
 //		

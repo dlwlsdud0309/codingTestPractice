@@ -26,7 +26,7 @@ public class Barista {
 		}
 		
 		order.isCompleted = true;
-		coffeeTotalNum += order.coffeeNum;
+		coffeeTotalNum += order.coffeeNum; //coffeeNum : 커피의 개수
 		
 	}
 	
