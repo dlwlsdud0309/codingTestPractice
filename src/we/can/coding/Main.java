@@ -23,7 +23,9 @@ public class Main {
 //		baristaLee.makeCoffee(order1);
 //		baristaLee.showInfo(); //커피의 잔 수가 증가하지 않은 것을 확인할 수 있음
 		
-		
+		System.out.println("===========================");
+		Casher casherKim = new Casher("Kim", 4000);
+		casherKim.showSalary();
 		
 		
 		

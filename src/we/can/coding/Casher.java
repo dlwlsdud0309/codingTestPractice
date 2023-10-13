@@ -3,7 +3,7 @@ package we.can.coding;
 public class Casher {
 	//속성
 	String name; //이름
-	int salary; //연봉
+	private int salary; //연봉
 	int orderTotalNum; //총 만든 주문서의 개수
 	
 	public Casher(String name) { //생성자
