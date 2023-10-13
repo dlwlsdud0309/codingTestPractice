@@ -34,6 +34,12 @@ public class Casher extends Employee{
 //		System.out.println("&&& 캐셔 "+name+"의 연봉은 "+salary+"입니다.");
 //	}
 	
+
+	//Employee 클래스에 있는 showSalary 함수를 재정의 = 덮어쓰기(오버라이딩Overriding)
+	public void showSalary() {
+		System.out.println("&&& 캐셔 "+name+"의 연봉은 "+salary+"입니다.");
+	}
+	
 	//getter와 setter에 대하여 p.208
 	public int getSalary() {
 		return salary; //salary 값을 가져오기 때문에 int로 리턴됨

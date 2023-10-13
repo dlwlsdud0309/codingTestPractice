@@ -30,7 +30,8 @@ public class Barista extends Employee{
 		
 	}
 	
-//	public void showInfo() {
-//		System.out.println("*** 바리스타 "+name+"가/이 만든 총 커피의 개수는 "+coffeeTotalNum+"이며 연봉은 "+salary+"입니다.");
-//	}
+	public void showInfo() {
+		System.out.println("*** 바리스타 "+name+"가/이 만든 총 커피의 개수는 "+coffeeTotalNum+"이며 연봉은 "+salary+"입니다.");
+	}
+	
 }
