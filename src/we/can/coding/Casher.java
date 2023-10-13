@@ -36,10 +36,10 @@ public class Casher {
 	
 	//getter와 setter에 대하여 p.208
 	public int getSalary() {
-		return salary;
+		return salary; //salary 값을 가져오기 때문에 int로 리턴됨
 	}
 	
-	public int setSalary(int salary) {
-		return salary;
+	public void setSalary(int salary) { //파라미터로 들어온 값을 세팅만 해주기 때문에 void 함수임
+		this.salary = salary;
 	}
 }
