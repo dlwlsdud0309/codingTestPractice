@@ -1,6 +1,6 @@
 package we.can.coding;
 
-public class Barista {
+public class Barista extends Employee{
 	String name;
 	int salary;
 	int coffeeTotalNum; //총 만든 커피의 잔 수

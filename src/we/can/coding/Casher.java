@@ -1,6 +1,6 @@
 package we.can.coding;
 
-public class Casher {
+public class Casher extends Employee{
 	//속성
 	String name; //이름
 	private int salary; //연봉
