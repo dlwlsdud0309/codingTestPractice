@@ -1,6 +1,6 @@
 package we.can.coding;
 
-public class Casher extends Employee{
+public class Casher extends Employee implements Cleaning{
 	//속성
 	//String name; //이름
 	//private int salary; //연봉
@@ -53,5 +53,20 @@ public class Casher extends Employee{
 			return;
 		}
 		this.salary = salary;
+	}
+
+	@Override
+	public void sweep() {
+		System.out.println("&&& 캐셔 "+name+"은 카운터 바닥을 청소합니다.");
+	}
+
+	@Override
+	public void wipe() {
+		System.out.println("&&& 캐셔 "+name+"은 카운터 바닥을 닦아 냅니다.");
+	}
+
+	@Override
+	public void arrange() {
+		System.out.println("&&& 캐셔 "+name+"은 카운터를 정리 정돈합니다.");
 	}
 }
