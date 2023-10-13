@@ -29,6 +29,7 @@ public class Casher {
 	}
 	
 	//연봉을 보여주는 메서드
+	//아래 접근지정자 public을 private로 변경하면 Main에서 showSalary()를 사용할 수 없다.
 	public void showSalary() {
 		System.out.println("&&& 캐셔 "+name+"의 연봉은 "+salary+"입니다.");
 	}
