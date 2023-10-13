@@ -29,8 +29,20 @@ public class Main {
 //		casherKim.salary = 10; //private가 아닌 default 였을 때는 오류가 나지 않았으나
 //		casherKim.showSalary(); //int salary를 private로 지정하면 오류 발생
 		
+		//게터 함수로 연봉 확인
 		int casherKimSalary = casherKim.getSalary();
 		System.out.println(casherKimSalary);
+		
+		//세터 함수로 연봉 변경
+		casherKim.setSalary(10);
+		int casherKimSalary2 = casherKim.getSalary();
+		System.out.println(casherKimSalary2);
+		
+		
+		
+		
+		
+		
 		
 //		Barista baristaGu = new Barista("구슬기");
 //		baristaGu.showInfo();
