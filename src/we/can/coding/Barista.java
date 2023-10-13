@@ -1,8 +1,8 @@
 package we.can.coding;
 
 public class Barista extends Employee{
-	String name;
-	int salary;
+	//String name;
+	//int salary;
 	int coffeeTotalNum; //총 만든 커피의 잔 수
 	
 	public Barista(String name) {
@@ -30,7 +30,7 @@ public class Barista extends Employee{
 		
 	}
 	
-	public void showInfo() {
-		System.out.println("*** 바리스타 "+name+"가/이 만든 총 커피의 개수는 "+coffeeTotalNum+"이며 연봉은 "+salary+"입니다.");
-	}
+//	public void showInfo() {
+//		System.out.println("*** 바리스타 "+name+"가/이 만든 총 커피의 개수는 "+coffeeTotalNum+"이며 연봉은 "+salary+"입니다.");
+//	}
 }

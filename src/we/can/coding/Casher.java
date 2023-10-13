@@ -2,8 +2,8 @@ package we.can.coding;
 
 public class Casher extends Employee{
 	//속성
-	String name; //이름
-	private int salary; //연봉
+	//String name; //이름
+	//private int salary; //연봉
 	int orderTotalNum; //총 만든 주문서의 개수
 	
 	public Casher(String name) { //생성자
@@ -30,9 +30,9 @@ public class Casher extends Employee{
 	
 	//연봉을 보여주는 메서드
 	//아래 접근지정자 public을 private로 변경하면 Main에서 showSalary()를 사용할 수 없다.
-	public void showSalary() {
-		System.out.println("&&& 캐셔 "+name+"의 연봉은 "+salary+"입니다.");
-	}
+//	public void showSalary() {
+//		System.out.println("&&& 캐셔 "+name+"의 연봉은 "+salary+"입니다.");
+//	}
 	
 	//getter와 setter에 대하여 p.208
 	public int getSalary() {
