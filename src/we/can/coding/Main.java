@@ -26,7 +26,8 @@ public class Main {
 		System.out.println("===========================");
 		Casher casherKim = new Casher("Kim", 4000);
 		casherKim.showSalary();
-		
+//		casherKim.salary = 10; //private가 아닌 default 였을 때는 오류가 나지 않았으나
+//		casherKim.showSalary(); //int salary를 private로 지정하면 오류 발생
 		
 		
 //		Barista baristaGu = new Barista("구슬기");
