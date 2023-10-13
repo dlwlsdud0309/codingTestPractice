@@ -7,7 +7,7 @@ public class Main {
 		Barista baristaLee = new Barista("Lee");
 		
 		casherGu.showInfo();
-		baristaLee.showInfo();
+//		baristaLee.showInfo();
 		System.out.println("===========================");
 		OrderSheet order1 = casherGu.makeOrderSheet(4);
 		
@@ -17,7 +17,7 @@ public class Main {
 
 		baristaLee.makeCoffee(order1);
 		order1.showInfo();
-		baristaLee.showInfo();
+//		baristaLee.showInfo();
 		
 //		System.out.println("이미 완료가 된 주문서를 바리스타에게 넘겼을 경우 : ");
 //		baristaLee.makeCoffee(order1);
@@ -34,9 +34,13 @@ public class Main {
 		System.out.println(casherKimSalary);
 		
 		//세터 함수로 연봉 변경
-		casherKim.setSalary(10);
-		int casherKimSalary2 = casherKim.getSalary();
-		System.out.println(casherKimSalary2);
+//		casherKim.setSalary(10);
+//		int casherKimSalary2 = casherKim.getSalary();
+//		System.out.println(casherKimSalary2); //현재 연봉보다 낮은 연봉으로 변경할 수 없도록 추가 코드 작성
+		
+		Barista baristaKim = new Barista("Kim");
+		baristaKim.setSalary(3000);
+		baristaKim.showSalary();
 		
 		
 		
