@@ -40,6 +40,12 @@ public class Casher {
 	}
 	
 	public void setSalary(int salary) { //파라미터로 들어온 값을 세팅만 해주기 때문에 void 함수임
+//		this.salary = salary;
+		//현재 연봉보다 작은 값이 들어오면 단독 return 문을 통해 함수를 종료시키도록 작성
+		if(salary < this.salary) {
+			System.out.println("연봉은 깎일 수 없습니다! 연봉을 올려 주지는 못할 망정!");
+			return;
+		}
 		this.salary = salary;
 	}
 }
