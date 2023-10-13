@@ -33,4 +33,13 @@ public class Casher {
 	public void showSalary() {
 		System.out.println("&&& 캐셔 "+name+"의 연봉은 "+salary+"입니다.");
 	}
+	
+	//getter와 setter에 대하여 p.208
+	public int getSalary() {
+		return salary;
+	}
+	
+	public int setSalary(int salary) {
+		return salary;
+	}
 }
