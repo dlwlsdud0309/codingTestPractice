@@ -43,7 +43,10 @@ public class Main {
 		baristaKim.showSalary();
 		
 		
+		//인터페이스 호출
+		casherKim.sweep();
 		
+		baristaKim.sweep();
 		
 		
 		
