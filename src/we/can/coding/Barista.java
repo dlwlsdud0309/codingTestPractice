@@ -46,7 +46,13 @@ public class Barista extends Employee implements Cleaning{
 
 	@Override
 	public void arrange() {
-		System.out.println("*** 바리스타 "+name+"은 커피 원두와 커피 머신을 정리합니다.");
+		// TODO Auto-generated method stub
+		
 	}
+
+//	@Override
+//	public void arrange() {
+//		System.out.println("*** 바리스타 "+name+"은 커피 원두와 커피 머신을 정리합니다.");
+//	}
 	
 }
