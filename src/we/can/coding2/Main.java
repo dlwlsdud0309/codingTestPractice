@@ -43,11 +43,16 @@ public class Main {
 	
 		Casher casherKim = new Casher("Kim", 4000);
 		casherKim.showSalary(); //4000
-//		casherKim.salary = 10; //외부 접근하여 연봉 변경, private로 설정 시 오류
+//		casherKim.salary = 10; //외부 접근하여 연봉 변경, private로 지정 시 오류
 //		casherKim.showSalary(); //10
-//		System.out.println(casherKim.salary); //오류
+//		System.out.println(casherKim.salary); //오류, private로 지정했기 때문에 변경도 조회도 할 수 없다.
 		//연봉 속성에 바로 접근이 불가하다(private). 연봉을 가져오려면(출력하려면) get함수를 통해야한다.
 		int casherKimSalary = casherKim.getSalary();
 		System.out.println(casherKimSalary);
+		
+		casherKim.setSalary(10);
+		casherKimSalary = casherKim.getSalary();
+		System.out.println(casherKimSalary);
+		
 	}
 }

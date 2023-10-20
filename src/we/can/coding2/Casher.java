@@ -21,6 +21,10 @@ public class Casher {
 	}
 	
 	public void setSalary(int salary) {
+		if(salary < this.salary) { //this.salary보다 적은 int salary가 들어오면 return을 만나 함수 종료
+			System.out.println("연봉은 깎일 수 없습니다! 연봉을 올려 주지는 못할 망정!");
+			return;
+		}
 		this.salary = salary;
 	}
 	
