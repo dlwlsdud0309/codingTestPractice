@@ -20,9 +20,30 @@ public class Main {
 
 		//아래의 order와 order2는 확인을 위해 serialNum을 사용하지 않고, 바로 orderNum을 ++증가시켜본 코드이다.
 		//참조변수 order와 order2는 서로 다른 주소값을 갖고 있기 때문에 주문서 번호가 1로 동일하게 출력된다.
-		OrderSheet order = new OrderSheet(2);
-		order.showInfo();
-		OrderSheet order2 = new OrderSheet(3);
-		order2.showInfo();
+//		OrderSheet order = new OrderSheet(2);
+//		order.showInfo(); //주문서 번호가 1
+//		OrderSheet order2 = new OrderSheet(3);
+//		order2.showInfo(); //주문서 번호가 1
+		
+		OrderSheet order = new OrderSheet(5);
+		order.showInfo(); //주문서 번호가 102
+		OrderSheet order2 = new OrderSheet(6);
+		order2.showInfo(); //주문서 번호가 103
+		
+		Casher casherShin = new Casher("Shin Coding");
+		casherShin.makeOrderSheet(7);
+		casherShin.showInfo(); //주문서의 개수가 1
+		casherShin.makeOrderSheet(3);
+		casherShin.showInfo(); //주문서의 개수가 2
+		
+		baristaKim.makeCoffee(order);
+		baristaKim.showInfo(); //커피의 개수가 5
+		baristaKim2.makeCoffee(order);
+		baristaKim2.showInfo(); //커피의 개수가 0, order은 이미 주문완료(isCompleted=true)되었기 때문
+	
+		Casher casherKim = new Casher("Kim", 4000);
+		casherKim.showSalary(); //4000
+//		casherKim.salary = 10; //외부 접근하여 연봉 변경, private로 설정 시 오류
+//		casherKim.showSalary(); //10
 	}
 }

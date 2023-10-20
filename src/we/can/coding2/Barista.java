@@ -24,7 +24,7 @@ public class Barista {
 	
 	//메서드 : 클래스 및 객체 내부에 있는 함수
 	public void makeCoffee(OrderSheet order) { //메서드는 객체의 행위를 뜻한다.
-		if(order.isCompleted == true) {
+		if(order.isCompleted == true) { //방어코드
 			return;
 		}
 		
