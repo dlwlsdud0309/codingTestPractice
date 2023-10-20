@@ -5,9 +5,10 @@ public class Main {
 		//name 속성을 설정하는 생성자 함수에 Lee라는 이름을 넣고
 		//new 연산자를 통해 바리스타 인스턴스를 생성한 것
 		//이와 같은 과정을 '객체 초기화'라고 한다.
-//		Barista baristaLee = new Barista("Lee");
-//		baristaLee.showInfo();
+		//생성과 동시에 값을 넣어주는 것이다.
+		Barista baristaLee = new Barista("Lee");
+		baristaLee.showInfo();
 		
-		Barista Kim = new Barista(); //기본생성자가 있어야 생성가능
+//		Barista Kim = new Barista(); //기본생성자가 있어야 생성가능
 	}
 }
