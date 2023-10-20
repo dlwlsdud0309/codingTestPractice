@@ -45,5 +45,6 @@ public class Main {
 		casherKim.showSalary(); //4000
 //		casherKim.salary = 10; //외부 접근하여 연봉 변경, private로 설정 시 오류
 //		casherKim.showSalary(); //10
+		System.out.println(casherKim.salary); //오류
 	}
 }
