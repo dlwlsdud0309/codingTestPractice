@@ -16,7 +16,13 @@ public class Main {
 		baristaKim2.name = "Kim2";
 		baristaKim2.salary = 5000; //객체를 초기화하는 과정이 오래 걸림
 		
-		
 //		Barista Kim = new Barista(); //기본생성자가 있어야 생성가능
+
+		//아래의 order와 order2는 확인을 위해 serialNum을 사용하지 않고, 바로 orderNum을 ++증가시켜본 코드이다.
+		//참조변수 order와 order2는 서로 다른 주소값을 갖고 있기 때문에 주문서 번호가 1로 동일하게 출력된다.
+		OrderSheet order = new OrderSheet(2);
+		order.showInfo();
+		OrderSheet order2 = new OrderSheet(3);
+		order2.showInfo();
 	}
 }
