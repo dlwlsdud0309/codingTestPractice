@@ -50,7 +50,10 @@ public class Main {
 		int casherKimSalary = casherKim.getSalary();
 		System.out.println(casherKimSalary);
 		
-		casherKim.setSalary(10);
+//		casherKim.setSalary(10);
+//		casherKimSalary = casherKim.getSalary();
+//		System.out.println(casherKimSalary);
+		casherKim.setSalary(4001);
 		casherKimSalary = casherKim.getSalary();
 		System.out.println(casherKimSalary);
 		
