@@ -1,6 +1,6 @@
 package we.can.coding2;
 
-public class Barista {
+public class Barista extends Employee{
 
 	String name;
 	int salary;

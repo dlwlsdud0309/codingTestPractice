@@ -1,6 +1,6 @@
 package we.can.coding2;
 
-public class Casher {
+public class Casher extends Employee {
 	String name;
 	private int salary; //private : 같은 클래스에서 사용가능(자기 자신)
 	int orderTotalNum;
