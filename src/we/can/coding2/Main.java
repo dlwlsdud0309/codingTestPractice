@@ -58,5 +58,7 @@ public class Main {
 		casherKimSalary = casherKim.getSalary();
 		System.out.println(casherKimSalary);
 		
+		casherKim.sweep();
+		baristaKim.sweep();
 	}
 }

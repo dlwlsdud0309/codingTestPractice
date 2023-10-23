@@ -1,6 +1,6 @@
 package we.can.coding2;
 
-public class Barista extends Employee{
+public class Barista extends Employee implements Cleaning{
 
 //	String name;
 //	int salary;
@@ -34,5 +34,20 @@ public class Barista extends Employee{
 	
 	public void showInfo() {
 		System.out.println("*** 바리스타 "+name+"이 만든 총 커피의 개수는 "+coffeeTotalNum+"입니다.");
+	}
+
+	@Override
+	public void sweep() {
+		System.out.println("*** 바리스타 "+name+"은 커피 머신을 브러쉬로 쓸어 냅니다.");
+	}
+
+	@Override
+	public void wipe() {
+		System.out.println("*** 바리스타 "+name+"은 커피 머신을 닦아냅니다.");
+	}
+
+	@Override
+	public void arrange() {
+		System.out.println("*** 바리스타 "+name+"은 커피 원두와 커피 머신을 정리합니다.");
 	}
 }

@@ -1,6 +1,6 @@
 package we.can.coding2;
 
-public class Casher extends Employee {
+public class Casher extends Employee implements Cleaning{
 //	String name;
 //	private int salary; //private : 같은 클래스에서 사용가능(자기 자신)
 	int orderTotalNum;
@@ -41,5 +41,20 @@ public class Casher extends Employee {
 	
 	public void showSalary() { //재정의, 오버라이딩(덮어쓰기)
 		System.out.println("&&& 캐셔 "+name+"의 연봉은 "+salary+"입니다.");
+	}
+
+	@Override
+	public void sweep() {
+		System.out.println("&&& 캐셔 "+name+"은 카운터 바닥을 청소합니다.");
+	}
+
+	@Override
+	public void wipe() {
+		System.out.println("&&& 캐셔 "+name+"은 카운터 바닥을 닦아 냅니다.");
+	}
+
+	@Override
+	public void arrange() {
+		System.out.println("&&& 캐셔 "+name+"은 카운터를 정리 정돈합니다.");
 	}
 }
