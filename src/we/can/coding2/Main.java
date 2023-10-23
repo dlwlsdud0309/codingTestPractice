@@ -40,6 +40,7 @@ public class Main {
 		baristaKim.showInfo(); //커피의 개수가 5
 		baristaKim2.makeCoffee(order);
 		baristaKim2.showInfo(); //커피의 개수가 0, order은 이미 주문완료(isCompleted=true)되었기 때문
+		baristaKim.showSalary();
 	
 		Casher casherKim = new Casher("Kim", 4000);
 		casherKim.showSalary(); //4000

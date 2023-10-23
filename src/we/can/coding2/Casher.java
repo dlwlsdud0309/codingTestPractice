@@ -39,7 +39,7 @@ public class Casher extends Employee {
 		System.out.println("&&& 캐셔 "+name+"이 처리한 총 주문서의 개수는 "+orderTotalNum+"입니다.");
 	}
 	
-//	public void showSalary() {
-//		System.out.println("&&& 캐셔 "+name+"의 연봉은 "+salary+"입니다.");
-//	}
+	public void showSalary() { //재정의, 오버라이딩(덮어쓰기)
+		System.out.println("&&& 캐셔 "+name+"의 연봉은 "+salary+"입니다.");
+	}
 }
