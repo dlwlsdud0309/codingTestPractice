@@ -1,8 +1,8 @@
 package we.can.coding2;
 
 public class Casher extends Employee {
-	String name;
-	private int salary; //private : 같은 클래스에서 사용가능(자기 자신)
+//	String name;
+//	private int salary; //private : 같은 클래스에서 사용가능(자기 자신)
 	int orderTotalNum;
 	
 	public Casher(String name) {
@@ -39,7 +39,7 @@ public class Casher extends Employee {
 		System.out.println("&&& 캐셔 "+name+"이 처리한 총 주문서의 개수는 "+orderTotalNum+"입니다.");
 	}
 	
-	public void showSalary() {
-		System.out.println("&&& 캐셔 "+name+"의 연봉은 "+salary+"입니다.");
-	}
+//	public void showSalary() {
+//		System.out.println("&&& 캐셔 "+name+"의 연봉은 "+salary+"입니다.");
+//	}
 }

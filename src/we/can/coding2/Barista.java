@@ -2,8 +2,8 @@ package we.can.coding2;
 
 public class Barista extends Employee{
 
-	String name;
-	int salary;
+//	String name;
+//	int salary;
 	int coffeeTotalNum;
 	
 	public Barista() {
