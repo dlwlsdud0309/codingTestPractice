@@ -11,6 +11,8 @@ public class Chapter14_LambdaExpression {
 //	(String name, int i) -> 
 //		System.out.println(name+"="+i)
 	
+	
+	
 	interface MyFunction{
 		int calc(int x, int y);
 	}
@@ -19,8 +21,10 @@ public class Chapter14_LambdaExpression {
 		MyFunction add=(x,y)->{
 			return x+y;
 		};
+		MyFunction minus=(x,y)->x-y;
 		
-		System.out.println(add.calc(1, 2));
+		System.out.println("add : "+add.calc(1, 2));
+		System.out.println("minus : "+minus.calc(1, 2));
 	}
 	
 }
