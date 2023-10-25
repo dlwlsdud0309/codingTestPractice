@@ -28,5 +28,17 @@ public class ArrayListTest {
 		for (String zVal : zoo) {
 			System.out.println(zVal); //lion 삭제됨
 		}
+		
+		System.out.println("@@@ add 사용하여 문자로 직접 추가");
+		zoo.add("lion2");
+		for (String zVal : zoo) {
+			System.out.println(zVal); //lion 삭제됨
+		}
+		
+		System.out.println("@@@ add 사용하여 인덱스로 위치 지정 후 추가");
+		zoo.add(0, "lion3");
+		for (String zVal : zoo) {
+			System.out.println(zVal); //lion 삭제됨
+		}
 	}
 }
