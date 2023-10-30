@@ -27,6 +27,17 @@ public class MultiplicationTable {
 //
 //		이 코드를 실행하면 입력한 높이에 맞는 피라미드가 출력됩니다.
             
+		System.out.println("====");
+		for (int i = 1; i < 5; i++) {
+			for (int j = 1; j < 5-i; j++) {
+				System.out.print(" ");
+			}
+			for (int j = 0; j < i; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		
 		
 //		for (int i = 0; i < 5; i++) {
 ////			System.out.print("@");
