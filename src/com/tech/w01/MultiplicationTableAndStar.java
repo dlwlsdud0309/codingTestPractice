@@ -2,6 +2,24 @@ package com.tech.w01;
 
 public class MultiplicationTableAndStar {
 	public static void main(String[] args) {
+		
+		//ChatGPT
+		int n = 5; // 역피라미드의 높이 (행 수)
+
+        for (int i = 1; i <= n; i++) {
+            // 왼쪽 공백 출력
+            for (int j = 1; j < i; j++) {
+                System.out.print(" ");
+            }
+
+            // '*' 출력
+            for (int k = 1; k <= 2 * (n - i) + 1; k++) {
+                System.out.print("*");
+            }
+
+            // 줄 바꿈
+            System.out.println();
+        }
 
 		//*********
 		// *******
@@ -13,7 +31,8 @@ public class MultiplicationTableAndStar {
 			for (int j = 1; j < i; j++) {
 				System.out.print(" ");
 			}
-			for (int j = 9; j >= i*2-1; j--) {
+//			for (int j = 9; j >= i*2-1; j--) {
+			for (int j = 1; j <= 2 * (5 - i) + 1; j++) {
 				System.out.print("*");
 			}
 				
@@ -79,7 +98,7 @@ public class MultiplicationTableAndStar {
 		}
 		
 		System.out.println("=====");
-		int n = 5; // 피라미드의 높이
+		n = 5; // 피라미드의 높이
 		for (int i = 1; i <= n; i++) {
             // 왼쪽에 공백을 출력
             for (int j = 1; j <= n - i; j++) {
