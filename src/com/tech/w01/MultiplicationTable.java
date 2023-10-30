@@ -3,21 +3,51 @@ package com.tech.w01;
 public class MultiplicationTable {
 	public static void main(String[] args) {
 
-		for (int i = 1; i <= 5; i++) {
-			System.out.print("@");
-			for (int j = 0; j < i; j++) {
-				System.out.print("*");
-			}
-			System.out.println();
+		int n = 5; // 피라미드의 높이
+		for (int i = 1; i <= n; i++) {
+            // 왼쪽에 공백을 출력
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+
+            // 가운데에 별을 출력
+            for (int k = 1; k <= 2 * i - 1; k++) {
+                System.out.print("*");
+            }
+
+            // 다음 행으로 이동
+            System.out.println();
 		}
 		
-		for (int i = 5; i >0 ; i--) {
-			for (int j = 0; j < i; j++) {
-				System.out.print("*");
-			}
-			System.out.println();
-		}
+//		이 코드는 피라미드의 높이를 n 변수로 조절할 수 있습니다. n 값을 변경하여 원하는 피라미드 높이를 설정할 수 있습니다. 코드는 두 개의 중첩된 루프를 사용하여 각 행에 공백과 별표를 출력합니다.
+//
+//		첫 번째 루프(for (int j = 1; j <= n - i; j++))는 왼쪽에 필요한 공백을 출력합니다. n - i 만큼의 공백을 출력하므로 맨 위 행에서는 거의 공백이 없고 아래로 갈수록 공백이 늘어납니다.
+//
+//		두 번째 루프(for (int k = 1; k <= 2 * i - 1; k++))는 가운데에 별표를 출력합니다. 2 * i - 1 개의 별표를 출력하여 각 행마다 별표 개수를 조절합니다.
+//
+//		이 코드를 실행하면 입력한 높이에 맞는 피라미드가 출력됩니다.
+            
 		
+//		for (int i = 0; i < 5; i++) {
+////			System.out.print("@");
+//			for (int j = 0; j <i; j++) {
+//				System.out.print(" ");
+//			}
+//			for (int j = 5; j > i; j--) {
+//				System.out.print("*");
+//			}
+//			System.out.println();
+//		}
+//		
+//		System.out.println("============");
+//		
+//		for (int i = 5; i >0 ; i--) {
+//			for (int j = 0; j < i; j++) {
+//				System.out.print("*");
+//			}
+//			System.out.println();
+//		}
+//		
 //		for (int i = 1; i <= 3; i++) {
 //			System.out.print("@");
 //			for (int j = 0; j < i; j++) {
