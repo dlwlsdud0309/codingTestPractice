@@ -3,6 +3,46 @@ package com.tech.w01;
 public class MultiplicationTableAndStar {
 	public static void main(String[] args) {
 
+		//*********
+		// *******
+		//  *****
+		//   ***
+		//    *
+		for (int i = 1; i <= 5; i++) {
+			//공백부터
+			for (int j = 1; j < i; j++) {
+				System.out.print(" ");
+			}
+			for (int j = 9; j >= i*2-1; j--) {
+				System.out.print("*");
+			}
+				
+			System.out.println();
+		}
+		
+		System.out.println("==========");
+		//	  *		1개(j=0 / i=1 이므로 0<1*2-1=1 성립)
+		//	 ***	3개(j=0,1,2 / i=3 이므로 0<2*2-1=3 성립)
+		//	*****	5개
+		// *******	7개
+		//*********	9개
+		for (int i = 1; i <= 5; i++) {
+			for (int j = 5; j > i; j--) {
+				System.out.print(" ");
+			}
+			for (int j = 0; j < i*2-1; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		
+		
+		System.out.println("=====");
+		//*****
+		// ****
+		//  ***
+		//   **
+		//    *
 		for (int i = 1; i <= 5; i++) {
 			for (int j = 1; j < i; j++) {
 				System.out.print(" ");
@@ -14,6 +54,11 @@ public class MultiplicationTableAndStar {
 		}
 		
 		System.out.println("======");
+		//*
+		//**
+		//***
+		//****
+		//*****
 		for (int i = 1; i <= 5; i++) {
 			for (int j = 0; j < i; j++) {
 				System.out.print("*");
