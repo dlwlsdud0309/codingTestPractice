@@ -3,6 +3,17 @@ package com.tech.w01;
 public class MultiplicationTable {
 	public static void main(String[] args) {
 
+		int start = 1;
+		for (int i = 0; i < 5; i++) {
+			start = 1; //리셋해주어야함
+			for (int j = 0; j < 5; j++) {
+				System.out.print(start);
+				start++;
+			}
+			System.out.println();
+		}
+		
+		System.out.println("=====");
 		int n = 5; // 피라미드의 높이
 		for (int i = 1; i <= n; i++) {
             // 왼쪽에 공백을 출력
