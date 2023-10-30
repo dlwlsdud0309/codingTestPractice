@@ -1,8 +1,28 @@
 package com.tech.w01;
 
-public class MultiplicationTable {
+public class MultiplicationTableAndStar {
 	public static void main(String[] args) {
 
+		for (int i = 1; i <= 5; i++) {
+			for (int j = 1; j < i; j++) {
+				System.out.print(" ");
+			}
+			for (int j = 5; j >= i; j--) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		
+		System.out.println("======");
+		for (int i = 1; i <= 5; i++) {
+			for (int j = 0; j < i; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		System.out.println("===");
+		
+		
 		int start = 1;
 		for (int i = 0; i < 5; i++) {
 			start = 1; //리셋해주어야함
