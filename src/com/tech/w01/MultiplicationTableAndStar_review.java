@@ -20,5 +20,54 @@ public class MultiplicationTableAndStar_review {
 			}
 			System.out.println();
 		}
+		
+		System.out.println("========================");
+
+		//역삼각형
+		//    *
+		//   ***
+		//  *****
+		// *******
+		//*********
+		for (int i = 1; i <= 5; i++) {
+			for (int j = 5; j > i; j--) {
+				System.out.print(" ");
+			}
+			for (int j = 0; j < i*2-1; j++) {
+				System.out.print(j+1);
+			}
+			System.out.println();
+		}
+		
+		System.out.println("========================");
+
+		//우측에 빗변이 붙은 삼각형
+		for (int i = 1; i <= 5; i++) {
+			for (int j = 5; j > i; j--) {
+				System.out.print(" ");
+			}
+			for (int j = 0; j < i; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		
+		System.out.println("========================");
+
+		//역피라미드
+		//*********
+		// *******
+		//  *****
+		//   ***
+		//    *
+		for (int i = 1; i <= 5; i++) {
+			for (int j = 1; j < i; j++) {
+				System.out.print(" ");
+			}
+			for (int j = 9; j >= i*2-1; j--) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
 	}
 }
