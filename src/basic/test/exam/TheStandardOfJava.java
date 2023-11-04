@@ -22,5 +22,14 @@ public class TheStandardOfJava {
 		
 		String name = new String("Java"); //String 객체를 생성
 		String name2 = "Java";
+		
+		//자료형 -기본형, 참조형
+		//기본형 : 문자형, 정수형(byte, short, int, long), 실수형(float, double)
+		//		 실제 값을 저장한다.
+		//참조형 : 8개의 기본형을 제외한 나머지 타입
+		//		 어떤 값이 저장되어 있는 주소(memory address)를 값으로 갖는다.
+		
+		//자바는 C언어와 달리 참조형 변수 간의 연산을 할 수 없으므로
+		//실제 연산에 사용되는 것은 모두 기본형 변수이다.
 	}
 }
