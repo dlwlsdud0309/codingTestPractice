@@ -31,5 +31,19 @@ public class TheStandardOfJava {
 		
 		//자바는 C언어와 달리 참조형 변수 간의 연산을 할 수 없으므로
 		//실제 연산에 사용되는 것은 모두 기본형 변수이다.
+		
+		
+		//printf
+		int age = 14;
+		System.out.printf("age:%d", age);
+		System.out.printf("age:%d", 14);
+		System.out.printf("age:14");
+		
+		//출력하려는 값이 2개라면, 지시자도 2개를 사용해야 하며
+		//출력될 값과 지시자의 순서가 일치해야 한다
+		int year = 2019;
+		System.out.printf("age:%d year:%d", age, year);
+		System.out.println("==");
+		System.out.printf("age:%d%nyear:%d", 14, 2019);
 	}
 }
