@@ -1,5 +1,7 @@
 package basic.test.exam;
 
+import java.io.BufferedOutputStream;
+
 public class TheStandardOfJava {
 	//자바의 정석
 
@@ -45,5 +47,8 @@ public class TheStandardOfJava {
 		System.out.printf("age:%d year:%d", age, year);
 		System.out.println("==");
 		System.out.printf("age:%d%nyear:%d", 14, 2019);
+		System.out.println();
+		float tmp = 3.456789f; //소수점도 포함
+		System.out.printf("tmp=%10.2f", tmp);
 	}
 }
