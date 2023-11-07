@@ -1,6 +1,6 @@
 package basic.test.exam;
 
-import java.io.BufferedOutputStream;
+import java.util.Scanner;
 
 public class TheStandardOfJava {
 	//자바의 정석
@@ -50,5 +50,22 @@ public class TheStandardOfJava {
 		System.out.println();
 		float tmp = 3.456789f; //소수점도 포함
 		System.out.printf("tmp=%10.2f", tmp);
+		
+		
+		//화면으로부터 입력받기
+		//1.Scanner 클래스의 객체 생성
+		//2.입력받은 문자열을 변수에 저장
+		
+		Scanner scanner = new Scanner(System.in);
+		String input = scanner.nextLine();
+		
+		System.out.println("input : "+input);
+		
+		int num = Integer.parseInt(input);
+		System.out.println("num : "+num);
+		
+		int num2 = scanner.nextInt();
+		System.out.println("num2 : "+num2);
+		
 	}
 }
