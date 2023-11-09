@@ -50,22 +50,28 @@ public class TheStandardOfJava {
 		System.out.println();
 		float tmp = 3.456789f; //소수점도 포함
 		System.out.printf("tmp=%10.2f", tmp);
+		System.out.println();
 		
 		
 		//화면으로부터 입력받기
 		//1.Scanner 클래스의 객체 생성
 		//2.입력받은 문자열을 변수에 저장
 		
-		Scanner scanner = new Scanner(System.in);
-		String input = scanner.nextLine();
+//		Scanner scanner = new Scanner(System.in);
+//		String input = scanner.nextLine();
+//		
+//		System.out.println("input : "+input);
+//		
+//		int num = Integer.parseInt(input);
+//		System.out.println("num : "+num);
+//		
+//		int num2 = scanner.nextInt();
+//		System.out.println("num2 : "+num2);
 		
-		System.out.println("input : "+input);
-		
-		int num = Integer.parseInt(input);
-		System.out.println("num : "+num);
-		
-		int num2 = scanner.nextInt();
-		System.out.println("num2 : "+num2);
+		//Math.round
+		long result = Math.round(4.52);
+		long result2 = Math.round(4.123);
+		System.out.println(result+", "+result2);
 		
 	}
 }
