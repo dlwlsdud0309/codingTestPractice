@@ -27,7 +27,7 @@ public class Star {
 		
 		System.out.println();
 		
-		//피라미드
+		//역피라미드
 		for (int i = 0; i < 9; i++) { //9줄
 			for (int j = 1; j <= i; j++) { //i는 0에서 8까지 존재, j는 1부터 i가 1일 때 까지 공백, 그러므로 총 8줄
 				System.out.print(" ");
@@ -38,14 +38,15 @@ public class Star {
 			System.out.println();
 		}
 		
-		//??
+		//공백과 11개의 별이 출력되는 이유
 		for (int i = 0; i < 9; i++) {
 			for (int j = 9; j >= i*2-1; j--) {
-				System.out.print(j); // 9에서 0과 -1까지 출력되어 총 11개의 숫자
+				System.out.print(j); //j가 후위연산자이기 때문에 9에서부터 0까지, 0에 해당하는 -1도 출력되어 총 11개의 숫자
 			}
 			System.out.println();
 		}
 		
+		//역피라미드
 		//*********
 		// *******
 		//  *****
@@ -61,6 +62,19 @@ public class Star {
 				System.out.print("*");
 			}
 				
+			System.out.println();
+		}
+		
+		System.out.println();
+		
+		//피라미드
+		for (int i = 1; i <= 5; i++) {
+			for (int j = 5; j > i; j--) {
+				System.out.print(" ");
+			}
+			for (int j = 0; j < i*2-1; j++) {
+				System.out.print("*");
+			}
 			System.out.println();
 		}
 	}
