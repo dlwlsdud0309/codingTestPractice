@@ -19,7 +19,7 @@ public class Star {
 		
 		//빗변이 좌측에 붙은 역삼각형
 		for (int i = 0; i < 5; i++) {
-			for (int j = 5; j > i; j--) {
+			for (int j = 5; j > i; j--) { //j는 5부터 i보다 작을 때까지, 5부터 증감
 				System.out.print("*");
 			}
 			System.out.println();
@@ -46,7 +46,7 @@ public class Star {
 			System.out.println();
 		}
 		
-		//역피라미드
+		//역피라미드(구분 위해 !로 대체)
 		//*********
 		// *******
 		//  *****
@@ -54,12 +54,12 @@ public class Star {
 		//    *
 		for (int i = 1; i <= 5; i++) {
 			//공백부터
-			for (int j = 1; j < i; j++) {
+			for (int j = 1; j < i; j++) { //j는 1부터 i보다 작을 때까지, i는 최대 5, j는 1,2,3,4까지
 				System.out.print(" ");
 			}
 			for (int j = 9; j >= i*2-1; j--) {
 //					for (int j = 1; j <= 2 * (5 - i) + 1; j++) {
-				System.out.print("*");
+				System.out.print("!");
 			}
 				
 			System.out.println();
