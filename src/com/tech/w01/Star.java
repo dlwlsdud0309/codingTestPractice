@@ -1,5 +1,7 @@
 package com.tech.w01;
 
+import java.util.Iterator;
+
 public class Star {
 	public static void main(String[] args) {
 		
@@ -75,6 +77,13 @@ public class Star {
 //				if(j==5 && i*2-1==9) { //i가 5일때 j는 
 //					System.out.print(i+","+j);
 //				}
+			}
+			System.out.println();
+		}
+		
+		for (int i = 0; i <= 5; i++) {
+			for (int j = 0; j < i; j++) {
+				System.out.print("*");
 			}
 			System.out.println();
 		}
