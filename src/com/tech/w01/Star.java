@@ -9,7 +9,6 @@ public class Star {
 		for (int i = 0; i < 5; i++) {
 			for (int j = 1; j <= i; j++) {
 				System.out.print(" ");
-//				System.out.print(j);
 			}
 			for (int j = 5; j > i; j--) {
 				System.out.print("*");
@@ -60,12 +59,12 @@ public class Star {
 				System.out.print(" ");
 			}
 			for (int j = 9; j >= i*2-1; j--) {
-//					for (int j = 1; j <= 2 * (5 - i) + 1; j++) {
 				System.out.print("*");
 			}
 				
 			System.out.println();
 		}
+		
 		//피라미드
 		for (int i = 2; i <= 5; i++) {
 			for (int j = 5; j > i; j--) {
@@ -81,6 +80,7 @@ public class Star {
 			System.out.println();
 		}
 		
+		//좌측에 빗변이 붙은 삼각형
 		for (int i = 0; i <= 5; i++) {
 			for (int j = 0; j < i; j++) {
 				System.out.print("*");
