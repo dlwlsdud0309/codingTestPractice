@@ -1,7 +1,5 @@
 package com.tech.w01;
 
-import java.util.Iterator;
-
 public class Star {
 	public static void main(String[] args) {
 		
